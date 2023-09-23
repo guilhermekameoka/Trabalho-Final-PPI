@@ -1,15 +1,22 @@
-* {
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  * {
     font-family: Arial, Helvetica, sans-serif;
-}
-
-.logo {
+  }
+  
+  .logo {
     height: 120px;
     width: 120px;
     border-radius: 50%;
     margin: 10px 60px 10px 10px;
-}
-
-nav {
+  }
+  
+  nav {
     background-color: rgb(43, 100, 102);
     width: 100%;
     height: 120px;
@@ -22,35 +29,39 @@ nav {
     gap: 50px;
     align-items: center;
     border-bottom: solid 1px rgb(78, 118, 119);
-}
-
-nav a {
+  }
+  
+  nav a {
     color: silver;
     text-decoration: none;
     font-size: 1.5rem;
-}
-
-nav a:hover {
+  }
+  
+  nav a:hover {
     color: #666;
-}
-
-#linkLogin {
+  }
+  
+  #linkLogin {
     margin-left: auto;
     margin-right: 50px;
-}
-
-body {
-    background-color: rgb(212, 212, 212);
-}
-
-main {}
-
-.banner {
+  }
+  
+  body {
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: fixed;
+    height: 100%;
+  }
+  
+  main {}
+  
+  .banner {
     width: 50%;
     height: 50%;
-}
-
-footer {
+  }
+  
+  footer {
     background-color: rgb(43, 100, 102);
     color: silver;
     padding: 10px;
@@ -62,4 +73,4 @@ footer {
     text-align: center;
     border-top: solid 1px rgb(78, 118, 119);
     font-size: 1.5rem;
-}
+  }
