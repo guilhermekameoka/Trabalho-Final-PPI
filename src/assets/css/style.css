@@ -93,7 +93,6 @@ nav a:hover {
     margin-left: auto;
     margin-right: 60px;
 }
-
 /* ################ */
 
 
@@ -103,8 +102,8 @@ nav a:hover {
 input.form-control:focus,
 select.form-select:focus,
 input.form-check-input:checked {
-  border-color: rgb(158, 187, 158);
-  box-shadow: 0 0 0 0.2rem rgb(158, 187, 158);
+    border-color: rgb(158, 187, 158);
+    box-shadow: 0 0 0 0.2rem rgb(158, 187, 158);
 }
 /* ################# */
 
@@ -119,11 +118,11 @@ input.form-check-input:checked {
     background-color: rgb(105, 137, 138);
 }
 
-.paginaLogin input{
+.paginaLogin input {
     margin-bottom: 5px;
 }
 
-.paginaLogin h3{
+.paginaLogin h3 {
     color: rgb(214, 188, 160);
     font-weight: bolder;
     margin-bottom: 20px;
@@ -136,12 +135,13 @@ input.form-check-input:checked {
 }
 
 
-#alertaEmail, #alertaSenha {
+#alertaEmail,
+#alertaSenha {
     display: none;
     color: red;
 }
-
 /*###################*/
+
 
 
 /* cadastro */
@@ -149,14 +149,15 @@ input.form-check-input:checked {
     background-color: rgb(105, 137, 138);
     border-radius: 15px;
     padding: 40px;
+    width: 1000px;
+}
+
+#checkRadio{
+    margin-top: 10px;
 }
 
 .cadastro button {
     margin-top: 30px;
-}
-
-.cadastro-check{
-    margin-top: 20px;
 }
 
 legend {
