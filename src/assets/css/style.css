@@ -119,6 +119,10 @@ input.form-check-input:checked {
     background-color: rgb(105, 137, 138);
 }
 
+.paginaLogin input{
+    margin-bottom: 5px;
+}
+
 .paginaLogin h3{
     color: rgb(214, 188, 160);
     font-weight: bolder;
@@ -128,6 +132,13 @@ input.form-check-input:checked {
 .labelLogin {
     padding: 20px;
     color: lightgrey;
+    margin-left: 10px;
+}
+
+
+#alertaEmail, #alertaSenha {
+    display: none;
+    color: red;
 }
 
 /*###################*/

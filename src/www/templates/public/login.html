@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/src/assets/css/style.css">
+    <script src="/src/assets/js/validaLogin.js"></script>
     <title>Login</title>
 </head>
 
@@ -29,14 +30,20 @@
     <main class="paginaLogin">
         <div class="container">
             <h3>Login</h3>
-            <form class="row g-3">
+            <form class="row g-3" id="login">
                 <div class="col-sm-12 form-floating">
                     <input type="email" name="email" class="form-control" id="email" placeholder=" ">
                     <label for="email" class="form-label labelLogin">Email</label>
+                    <div class="alert alert-danger alert-dismissible" id="alertaEmail">
+                        <span>O email deve ser preenchido!</span>
+                    </div>
                 </div>
                 <div class="col-sm-12 form-floating">
                     <input type="password" name="senha" class="form-control" id="senha" placeholder=" ">
                     <label for="senha" class="form-label labelLogin">Senha</label>
+                    <div class="alert alert-danger alert-dismissible" id="alertaSenha">
+                        <span>A senha deve ser preenchida!</span>
+                    </div>
                 </div>
                 <button class="btn btn-primary col-sm-12 btn-success">Entrar</button>
             </form>
