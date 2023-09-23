@@ -114,8 +114,15 @@ input.form-check-input:checked {
 .paginaLogin {
     margin: auto;
     width: 25%;
-    height: 55%;
+    border-radius: 15px;
     padding: 20px;
+    background-color: rgb(105, 137, 138);
+}
+
+.paginaLogin h3{
+    color: rgb(214, 188, 160);
+    font-weight: bolder;
+    margin-bottom: 20px;
 }
 
 .labelLogin {
@@ -128,7 +135,7 @@ input.form-check-input:checked {
 
 /* cadastro */
 .cadastro {
-    background-color: #ffffff;
+    background-color: rgb(105, 137, 138);
     border-radius: 15px;
     padding: 40px;
 }
@@ -137,8 +144,12 @@ input.form-check-input:checked {
     margin-top: 30px;
 }
 
-legend {
-    margin: 10px 0;
+.cadastro-check{
+    margin-top: 20px;
 }
 
+legend {
+    margin: 10px 0;
+    color: rgb(216, 194, 170);
+}
 /* ##################### */
