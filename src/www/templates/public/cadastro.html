@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/src/assets/css/style.css">
     <title>Cadastro</title>
 </head>
@@ -12,8 +13,11 @@
     <nav>
         <table>
             <tr>
-                <td><a href="../../../../index.html"><img class="logo" src="../../../assets/images/logo.jpg" title="Logomarca CliniSimples"></a></td>
-                <td><h1 id="CliniSimples">CliniSimples</h1></td>
+                <td><a href="../../../../index.html"><img class="logo" src="../../../assets/images/logo.jpg"
+                            title="Logomarca CliniSimples"></a></td>
+                <td>
+                    <h1 id="CliniSimples">CliniSimples</h1>
+                </td>
             </tr>
         </table>
         <a href="../../../../index.html">Home</a>
@@ -23,6 +27,118 @@
     </nav>
 
     <main>
+        <div class="cadastro">
+
+            <form>
+                <div class="container">
+                    <!-- dados pessoais -->
+                    <fieldset>
+                        <legend>Dados pessoais</legend>
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="form-floating">
+                                    <input class="form-control" type="text" id="nome" placeholder=" ">
+                                    <label for="nome">Nome</label>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="form-floating">
+                                    <input class="form-control" type="email" id="email" name="email" placeholder=" ">
+                                    <label for="nome">E-mail</label>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="form-floating">
+                                    <input class="form-control" type="text" id="cpf" placeholder=" ">
+                                    <label for="cpf">CPF</label>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="form-floating">
+                                    <input class="form-control" type="number" id="idade" placeholder=" ">
+                                    <label for="idade">Idade</label>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- sexo -->
+                        <div class="form-check">
+                            <div class="row">
+                                <div class="col">
+                                    <input class="form-check-input" type="radio" name="sexo" id="masculino">
+                                    <label class="form-check-label" for="masculino">Masculino</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <input class="form-check-input" type="radio" name="sexo" id="feminino">
+                                    <label class="form-check-label" for="feminino">Feminino</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+    
+                    <!-- endereço -->
+                    <fieldset>
+                        <legend>Endereço</legend>
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="form-floating">
+                                    <input class="form-control" type="rua" id="rua" name="rua" placeholder=" ">
+                                    <label for="nome">Rua</label>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="form-floating">
+                                    <input class="form-control" type="text" id="bairro" name="bairro" placeholder=" ">
+                                    <label for="nome">Bairro</label>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="form-floating">
+                                    <input class="form-control" type="text" id="cidade" name="cidade" placeholder=" ">
+                                    <label for="cpf">Cidade</label>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <select class="form-select" name="estado" id="estado" name="estado">
+                                    <option value=""> Estado</option>
+                                    <option value="AC">Acre</option>
+                                    <option value="AL">Alagoas</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="ES">Espírito Santo</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="RO">Rondônia</option>
+                                    <option value="RR">Roraima</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="SE">Sergipe</option>
+                                    <option value="TO">Tocantins</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+    
+                    <button class="btn btn-primary col-sm-12 btn-success">Cadastrar</button>
+                </div>
+            </form>
+        </div>
 
 
     </main>
