@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/src/assets/css/style.css">
     <title>Login</title>
 </head>
@@ -12,8 +13,11 @@
     <nav>
         <table>
             <tr>
-                <td><a href="../../../../index.html"><img class="logo" src="../../../assets/images/logo.jpg" title="Logomarca CliniSimples"></a></td>
-                <td><h1 id="CliniSimples">CliniSimples</h1></td>
+                <td><a href="../../../../index.html"><img class="logo" src="../../../assets/images/logo.jpg"
+                            title="Logomarca CliniSimples"></a></td>
+                <td>
+                    <h1 id="CliniSimples">CliniSimples</h1>
+                </td>
             </tr>
         </table>
         <a href="../../../../index.html">Home</a>
@@ -22,9 +26,21 @@
         <a id="linkLogin" href="login.html">Login</a>
     </nav>
 
-    <main>
-
-
+    <main class="paginaLogin">
+        <div class="container">
+            <h3>Login</h3>
+            <form class="row g-3">
+                <div class="col-sm-12 form-floating">
+                    <input type="email" name="email" class="form-control" id="email" placeholder=" ">
+                    <label for="email" class="form-label labelLogin">Email</label>
+                </div>
+                <div class="col-sm-12 form-floating">
+                    <input type="password" name="senha" class="form-control" id="senha" placeholder=" ">
+                    <label for="senha" class="form-label labelLogin">Senha</label>
+                </div>
+                <button class="btn btn-primary col-sm-12 btn-success">Entrar</button>
+            </form>
+        </div>
     </main>
 
     <footer>
