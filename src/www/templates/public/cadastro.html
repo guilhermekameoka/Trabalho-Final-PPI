@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../assets/css/style.css">
     <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
-    <script src="../../../assets/js/validaLogin.js"></script>
+    <script src="../../../assets/js/validaCadastro.js"></script>
     <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
     <title>Cadastro</title>
 </head>
@@ -42,28 +42,39 @@
                                 <div class="form-floating">
                                     <input class="form-control" type="text" id="nome" placeholder=" " autofocus>
                                     <label for="nome">Nome</label>
+                                    <div class="alert alert-danger alert-dismissible" id="alertaNome">
+                                        <span>O nome deve ser preenchido!</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="form-floating">
                                     <input class="form-control" type="email" id="email" name="email" placeholder=" ">
-                                    <label for="nome">E-mail</label>
+                                    <label for="email">E-mail</label>
+                                    <div class="alert alert-danger alert-dismissible" id="alertaEmail">
+                                        <span>O e-mail deve ser preenchido!</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="form-floating">
                                     <input class="form-control" type="text" id="cpf" placeholder=" ">
                                     <label for="cpf">CPF</label>
+                                    <div class="alert alert-danger alert-dismissible" id="alertaCpf">
+                                        <span>O CPF deve ser preenchido!</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="form-floating">
                                     <input class="form-control" type="number" id="idade" placeholder=" ">
                                     <label for="idade">Idade</label>
+                                    <div class="alert alert-danger alert-dismissible" id="alertaIdade">
+                                        <span>A idade deve ser preenchida!</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-    
                         <!-- sexo -->
                         <div class="form-check">
                             <div class="row" id="checkRadio">
@@ -80,67 +91,52 @@
                             </div>
                         </div>
                     </fieldset>
-    
                     <!-- endereço -->
                     <fieldset>
                         <legend>Endereço</legend>
                         <div class="row">
                             <div class="col-3">
                                 <div class="form-floating">
-                                    <input class="form-control" type="rua" id="rua" name="rua" placeholder=" ">
-                                    <label for="nome">Rua</label>
+                                    <input class="form-control" type="text" id="rua" name="rua" placeholder=" ">
+                                    <label for="rua">Rua</label>
+                                    <div class="alert alert-danger alert-dismissible" id="alertaRua">
+                                        <span>A rua deve ser preenchida!</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="form-floating">
                                     <input class="form-control" type="text" id="bairro" name="bairro" placeholder=" ">
-                                    <label for="nome">Bairro</label>
+                                    <label for="bairro">Bairro</label>
+                                    <div class="alert alert-danger alert-dismissible" id="alertaBairro">
+                                        <span>O bairro deve ser preenchido!</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="form-floating">
                                     <input class="form-control" type="text" id="cidade" name="cidade" placeholder=" ">
-                                    <label for="cpf">Cidade</label>
+                                    <label for="cidade">Cidade</label>
+                                    <div class="alert alert-danger alert-dismissible" id="alertaCidade">
+                                        <span>A cidade deve ser preenchida!</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-3">
-                                <select class="form-select" name="estado" id="estado" name="estado">
+                                <select class="form-select" name="estado" id="estado">
                                     <option value=""> Estado</option>
-                                    <option value="AC">Acre</option>
-                                    <option value="AL">Alagoas</option>
-                                    <option value="AP">Amapá</option>
-                                    <option value="AM">Amazonas</option>
-                                    <option value="BA">Bahia</option>
-                                    <option value="CE">Ceará</option>
-                                    <option value="DF">Distrito Federal</option>
-                                    <option value="ES">Espírito Santo</option>
-                                    <option value="GO">Goiás</option>
-                                    <option value="MA">Maranhão</option>
-                                    <option value="MT">Mato Grosso</option>
-                                    <option value="MS">Mato Grosso do Sul</option>
-                                    <option value="MG">Minas Gerais</option>
-                                    <option value="PA">Pará</option>
-                                    <option value="PB">Paraíba</option>
-                                    <option value="PR">Paraná</option>
-                                    <option value="PE">Pernambuco</option>
-                                    <option value="PI">Piauí</option>
-                                    <option value="RJ">Rio de Janeiro</option>
-                                    <option value="RN">Rio Grande do Norte</option>
-                                    <option value="RS">Rio Grande do Sul</option>
-                                    <option value="RO">Rondônia</option>
-                                    <option value="RR">Roraima</option>
-                                    <option value="SC">Santa Catarina</option>
-                                    <option value="SP">São Paulo</option>
-                                    <option value="SE">Sergipe</option>
-                                    <option value="TO">Tocantins</option>
+                                    <!-- Opções de estado aqui -->
                                 </select>
+                                <div class="alert alert-danger alert-dismissible" id="alertaEstado">
+                                    <span>O estado deve ser selecionado!</span>
+                                </div>
                             </div>
                         </div>
                     </fieldset>
-    
                     <button class="btn btn-primary col-sm-12 btn-success">Cadastrar</button>
                 </div>
             </form>
+            
         </div>
 
 

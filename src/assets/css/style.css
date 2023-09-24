@@ -43,7 +43,7 @@ footer {
     text-align: center;
     border-top: solid 1px rgb(78, 118, 119);
     font-size: 1.25rem;
-    margin-top:5px;
+    margin-top: 5px;
 }
 
 /* navegacao */
@@ -80,7 +80,7 @@ nav a:hover {
     padding: 20px;
     border-radius: 15px;
     background-color: rgb(105, 137, 138);
-    font-size: 1.2rem;    
+    font-size: 1.2rem;
 }
 
 .homePage h2 {
@@ -187,7 +187,15 @@ input.form-check-input:checked {
 
 
 #alertaEmail,
-#alertaSenha {
+#alertaSenha,
+#alertaNome,
+#alertaCpf,
+#alertaIdade,
+#alertaRua,
+#alertaBairro,
+#alertaCidade,
+#alertaEstado {
+    margin-top: 5px;
     display: none;
     color: red;
 }
