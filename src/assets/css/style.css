@@ -68,6 +68,27 @@ nav a:hover {
     color: #666;
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    color: silver;
+    padding: 40px;
+    border-radius: 15px;
+    background-color: rgb(105, 137, 138);
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+
+.content h3 {
+    color: rgb(214, 188, 160);
+    font-weight: bolder;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
 
 /* logomarca */
 .logo {
