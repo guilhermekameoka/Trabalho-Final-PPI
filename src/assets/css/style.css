@@ -39,7 +39,7 @@ footer {
     text-align: center;
     align-items: center;
     border-top: solid 1px rgb(78, 118, 119);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 /* navegacao */
@@ -74,13 +74,14 @@ nav a:hover {
     height: 120px;
     width: 120px;
     border-radius: 50%;
+    border: solid 4px rgb(101, 138, 116);
     margin: 10px 10px 10px 10px;
 }
 
 /* nome logomarca */
 #CliniSimples {
     margin-left: 10px;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(202, 175, 146);
     font-weight: bold;
@@ -94,6 +95,7 @@ nav a:hover {
     margin-left: auto;
     margin-right: 60px;
 }
+
 /* ################ */
 
 
@@ -106,6 +108,7 @@ input.form-check-input:checked {
     border-color: rgb(158, 187, 158);
     box-shadow: 0 0 0 0.2rem rgb(158, 187, 158);
 }
+
 /* ################# */
 
 
@@ -141,6 +144,7 @@ input.form-check-input:checked {
     display: none;
     color: red;
 }
+
 /*###################*/
 
 
@@ -153,7 +157,14 @@ input.form-check-input:checked {
     width: 1000px;
 }
 
-#checkRadio{
+.cadastro h3 {
+    color: rgb(214, 188, 160);
+    font-weight: bolder;
+    margin-bottom: 20px;
+
+}
+
+#checkRadio {
     margin-top: 10px;
 }
 
@@ -165,4 +176,5 @@ legend {
     margin: 10px 0;
     color: rgb(216, 194, 170);
 }
+
 /* ##################### */
