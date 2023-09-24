@@ -1,6 +1,8 @@
 ## GSI019 - Trabalho final
 Este repositório é dedicado ao trabalho final da disciplina GSI019 - Programação para Internet (PPI)
 
+<img src="frontend.png">
+
 ## Descrição
 
 Nosso sistema online é uma plataforma avançada dedicada ao atendimento clínico e
