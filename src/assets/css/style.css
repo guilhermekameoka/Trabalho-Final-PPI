@@ -48,29 +48,35 @@ footer {
 
 /* navegacao */
 nav {
+    margin: auto;
     background-color: rgb(43, 100, 102);
-    width: 100%;
-    height: 150px;
-    padding: 15px;
-    top: 0;
-    left: 0;
-    position: fixed;
-    display: flex;
-    justify-content: flex-start;
-    gap: 50px;
+    z-index: 1;
     align-items: center;
-    border-bottom: solid 1px rgb(78, 118, 119);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    font-size: 1.25rem;
 }
 
-nav a {
-    color: silver;
+
+nav li {
+    display: inline;
+    margin-left: 55px;
+    margin-right: 55px;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav li>a:hover {
+    transform: scale(1.1);
     text-decoration: none;
-    font-size: 1.5rem;
+    color: white;
 }
 
-nav a:hover {
-    color: #666;
+.navbar-toggler{
+    margin-right: 20px;
 }
+/* ############# */
 
 .homePage {
     flex: 0 auto;
@@ -119,7 +125,8 @@ nav a:hover {
     width: 120px;
     border-radius: 50%;
     border: solid 4px rgb(101, 138, 116);
-    margin: 10px 10px 10px 10px;
+    margin-left: 10px;
+    margin-right: 5px;
 }
 
 /* nome logomarca */

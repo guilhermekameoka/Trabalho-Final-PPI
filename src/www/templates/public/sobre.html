@@ -12,20 +12,40 @@
 </head>
 
 <body>
-    <nav>
+    <nav class="navbar navbar-expand-xl navbar-dark fixed-top ">
         <table>
             <tr>
-                <td><a href="../../../../index.html"><img class="logo" src="../../../assets/images/logo.jpg"
-                            title="Logomarca CliniSimples"></a></td>
+                <td>
+                    <a class="nav-link active col-1" href="./index.html">
+                        <img src="../../../assets/images/logo.jpg" class="logo" alt="Logomarca CiniSimples">
+                    </a>
+                </td>
                 <td>
                     <h1 id="CliniSimples">CliniSimples</h1>
                 </td>
             </tr>
         </table>
-        <a href="../../../../index.html">Home</a>
-        <a href="./sobre.html">Sobre</a>
-        <a href="./cadastro.html">Cadastro</a>
-        <a id="linkLogin" href="./login.html">Login</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link color-white" href="../../../../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link color-white" href="./sobre.html">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link color-white" href="./cadastro.html">Cadastro</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link color-white" href="./login.html">Login</a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
     <main>
