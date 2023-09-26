@@ -107,7 +107,6 @@ nav li>a:hover {
     border-radius: 15px;
     background-color: rgb(105, 137, 138);
     font-size: 1.5rem;
-    white-space: nowrap;
 }
 
 .content h3 {
@@ -430,6 +429,15 @@ legend {
 
     }
 
+    .content{
+        font-size: 1.2rem;
+
+    }
+
+    .content h3{
+        font-size: 1.5rem;
+    }
+
 }
 
 @media screen and (max-width: 360px) {
@@ -478,5 +486,13 @@ legend {
 
     .paginaLogin {
         width: 260px;
+    }
+
+    .content{
+        font-size: 1.1rem;
+    }
+
+    .content h3{
+        font-size: 1.3rem;
     }
 }
