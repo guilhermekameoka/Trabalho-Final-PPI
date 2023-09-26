@@ -245,6 +245,7 @@ legend {
 
 
 /* media queries */
+/* altura */
 @media screen and (max-height: 1240px) {
     main {
         margin-top: 180px;
@@ -252,11 +253,76 @@ legend {
     }
 }
 
+@media screen and (max-height: 915px) {
+    .homePage {
+        margin-top: 160px;
+        border-radius: 0px;
+    }
+
+    .homePage h2 {
+        font-size: 2rem;
+    }
+
+    footer {
+        margin-top: 0px;
+    }
+
+}
+
+
+@media screen and (max-height: 896px) {
+    .homePage {
+        margin-top: 155px;
+        border-radius: 0px;
+    }
+
+    footer {
+        margin-top: 0px;
+    }
+
+}
+
+@media screen and (max-height: 844px) {
+    .homePage {
+        margin-top: 150px;
+        border-radius: 0px;
+    }
+
+    .homePage h2 {
+        font-size: 2rem;
+    }
+
+    footer {
+        margin-top: 0px;
+    }
+
+}
+
 
 @media screen and (max-height: 800px) {
     .paginaLogin {
         margin-top: 260px;
         margin-bottom: 60px;
+    }
+
+    .homePage {
+        border-radius: 15px;
+    }
+
+}
+
+@media screen and (max-height: 720px) {
+    .homePage {
+        margin-top: 130px;
+        border-radius: 0px;
+    }
+
+    .homePage h2 {
+        font-size: 2rem;
+    }
+
+    footer {
+        margin-top: 0px;
     }
 
 }
@@ -267,12 +333,30 @@ legend {
         margin-bottom: 40px;
     }
 
+    .homePage {
+        margin-top: 150px;
+        border-radius: 0px;
+    }
+
+    footer {
+        margin-top: 0px;
+    }
+
 }
 
 @media screen and (max-height: 653px) {
     .paginaLogin {
         margin-top: 200px;
         margin-bottom: 40px;
+    }
+
+    .homePage {
+        margin-top: 130px;
+        border-radius: 0px;
+    }
+
+    .homePage h2 {
+        font-size: 1.4rem;
     }
 
 }
@@ -287,6 +371,13 @@ legend {
 
 
 
+
+/* largura */
+@media screen and (max-width: 1024px) {
+    .homePage {
+        padding: 40px;
+    }
+}
 
 
 @media screen and (max-width: 912px) {
