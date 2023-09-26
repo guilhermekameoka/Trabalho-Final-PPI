@@ -91,7 +91,6 @@ nav li>a:hover {
 .homePage h2 {
     color: rgb(214, 188, 160);
     font-weight: bolder;
-    margin-bottom: 20px;
     font-size: 2rem;
 
 }
@@ -245,17 +244,27 @@ legend {
 
 /* media queries */
 /* altura */
+
+@media screen and (max-height: 1280px) {
+    .homePage {
+        margin-top: 200px;
+    }
+}
+
 @media screen and (max-height: 1240px) {
     main {
         margin-top: 180px;
-        margin-bottom: 20px;
+    }
+
+    .homePage {
+        margin-top: 200px;
     }
 }
+
 
 @media screen and (max-height: 915px) {
     .homePage {
         margin-top: 160px;
-        border-radius: 0px;
     }
 
     .homePage h2 {
@@ -312,7 +321,7 @@ legend {
 
 @media screen and (max-height: 720px) {
     .homePage {
-        margin-top: 130px;
+        margin-top: 150px;
         border-radius: 0px;
     }
 
@@ -350,14 +359,13 @@ legend {
     }
 
     .homePage {
-        margin-top: 130px;
+        margin-top: 150px;
         border-radius: 0px;
     }
 
     .homePage h2 {
         font-size: 1.4rem;
     }
-
 }
 
 @media screen and (max-height: 600px) {
@@ -429,12 +437,12 @@ legend {
 
     }
 
-    .content{
+    .content {
         font-size: 1.2rem;
 
     }
 
-    .content h3{
+    .content h3 {
         font-size: 1.5rem;
     }
 
@@ -488,11 +496,11 @@ legend {
         width: 260px;
     }
 
-    .content{
+    .content {
         font-size: 1.1rem;
     }
 
-    .content h3{
+    .content h3 {
         font-size: 1.3rem;
     }
 }
