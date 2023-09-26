@@ -29,6 +29,7 @@ main {
     align-items: center;
 }
 
+
 footer {
     display: flex;
     flex-direction: row;
@@ -130,7 +131,7 @@ nav li>a:hover {
 /* nome logomarca */
 #CliniSimples {
     margin-left: 10px;
-    font-size: 2.25rem;
+    font-size: 2.5rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(202, 175, 146);
     font-weight: bold;
@@ -213,10 +214,10 @@ input.form-check-input:checked {
     background-color: rgb(105, 137, 138);
     border-radius: 15px;
     padding: 20px;
-    margin:20px;
+    margin: 20px;
 }
 
-.cadastro input{
+.cadastro input {
     margin-bottom: 5px;
 }
 
@@ -236,4 +237,110 @@ legend {
     color: rgb(216, 194, 170);
 }
 
+#botao {
+    width: 100%;
+}
+
 /* ##################### */
+
+
+/* media queries */
+@media screen and (max-height: 1240px) {
+    main {
+        margin-top: 180px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-height: 800px) {
+    .paginaLogin {
+        margin-top: 260px;
+        margin-bottom: 60px;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 537px) {
+    .paginaLogin {
+        width: 400px;
+        position: relative;
+        margin-top: 240px;
+        margin-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .logo {
+        width: 110px;
+        height: 110px;
+    }
+
+    #CliniSimples {
+        font-size: 2.3rem;
+    }
+
+    nav li {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    #CliniSimples {
+        font-size: 2rem;
+    }
+
+    nav li {
+        font-size: 1.2rem;
+    }
+
+    .paginaLogin {
+
+    }
+    
+}
+
+@media screen and (max-width: 360px) {
+    .logo {
+        width: 95px;
+        height: 95px;
+    }
+
+    #CliniSimples {
+        font-size: 2rem;
+    }
+
+    nav li {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    #CliniSimples {
+        font-size: 1.55rem;
+    }
+
+    nav li {
+        font-size: 1rem;
+    }
+}
