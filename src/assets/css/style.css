@@ -73,6 +73,7 @@ nav li>a:hover {
 
 .navbar-toggler {
     margin-right: 20px;
+    margin-left: 2%;
 }
 
 /* ############# */
@@ -315,13 +316,22 @@ legend {
 
     .homePage {
         border-radius: 15px;
+        margin-top: 175px;
+    }
+
+}
+
+@media screen and (max-height: 740px) {
+    .homePage {
+        border-radius: 15px;
+        margin-top: 130px;
     }
 
 }
 
 @media screen and (max-height: 720px) {
     .homePage {
-        margin-top: 150px;
+        margin-top: 135px;
         border-radius: 0px;
     }
 
@@ -359,13 +369,10 @@ legend {
     }
 
     .homePage {
-        margin-top: 150px;
+        margin-top: 135px;
         border-radius: 0px;
     }
 
-    .homePage h2 {
-        font-size: 1.4rem;
-    }
 }
 
 @media screen and (max-height: 600px) {
@@ -393,7 +400,6 @@ legend {
         position: relative;
     }
 }
-
 
 @media screen and (max-width: 540px) {
     .paginaLogin {
@@ -437,6 +443,10 @@ legend {
 
     }
 
+    .homePage h2 {
+        font-size: 1.8rem;
+    }
+
     .content {
         font-size: 1.2rem;
 
@@ -460,6 +470,10 @@ legend {
 
     nav li {
         font-size: 1rem;
+    }
+
+    .homePage h2 {
+        font-size: 1.7rem;
     }
 }
 
@@ -502,5 +516,10 @@ legend {
 
     .content h3 {
         font-size: 1.3rem;
+    }
+
+
+    .homePage h2{
+        font-size: 1.2rem;
     }
 }
