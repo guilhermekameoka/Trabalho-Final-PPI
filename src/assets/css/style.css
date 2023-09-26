@@ -252,31 +252,56 @@ legend {
     }
 }
 
+
 @media screen and (max-height: 800px) {
     .paginaLogin {
         margin-top: 260px;
         margin-bottom: 60px;
     }
-    
+
+}
+
+@media screen and (max-height: 667px) {
+    .paginaLogin {
+        margin-top: 220px;
+        margin-bottom: 40px;
+    }
+
+}
+
+@media screen and (max-height: 653px) {
+    .paginaLogin {
+        margin-top: 200px;
+        margin-bottom: 40px;
+    }
+
+}
+
+@media screen and (max-height: 600px) {
+    .paginaLogin {
+        margin-top: 190px;
+        margin-bottom: 40px;
+    }
+
 }
 
 
 
 
 
+@media screen and (max-width: 912px) {
+    .paginaLogin {
+        width: 700px;
+        position: relative;
+    }
+}
 
 
-
-
-
-
-
-@media screen and (max-width: 537px) {
+@media screen and (max-width: 540px) {
     .paginaLogin {
         width: 400px;
         position: relative;
-        margin-top: 240px;
-        margin-bottom: 60px;
+
     }
 }
 
@@ -310,9 +335,10 @@ legend {
     }
 
     .paginaLogin {
+        width: 350px;
 
     }
-    
+
 }
 
 @media screen and (max-width: 360px) {
@@ -337,10 +363,29 @@ legend {
     }
 
     #CliniSimples {
-        font-size: 1.55rem;
+        font-size: 1.8rem;
     }
 
     nav li {
         font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    #CliniSimples {
+        font-size: 1.5rem;
+    }
+
+    nav li {
+        font-size: 1rem;
+    }
+
+    .paginaLogin {
+        width: 260px;
     }
 }
