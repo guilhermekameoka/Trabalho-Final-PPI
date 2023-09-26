@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-xl navbar-dark fixed-top ">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top ">
         <table>
             <tr>
                 <td>
@@ -49,16 +49,15 @@
     </nav>
 
     <main>
-        <div class="cadastro">
-
-            <form>
+        <form>
+            <div class="cadastro">
                 <div class="container">
                     <h3>Cadastro</h3>
-                    <!-- dados pessoais -->
+
                     <fieldset>
                         <legend>Dados pessoais</legend>
                         <div class="row">
-                            <div class="col-3">
+                            <div class="col-sm-12">
                                 <div class="form-floating">
                                     <input class="form-control" type="text" id="nome" placeholder=" " autofocus>
                                     <label for="nome">Nome</label>
@@ -67,16 +66,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-3">
-                                <div class="form-floating">
-                                    <input class="form-control" type="email" id="email" name="email" placeholder=" ">
-                                    <label for="email">E-mail</label>
-                                    <div class="alert alert-danger alert-dismissible" id="alertaEmail">
-                                        <span>O e-mail deve ser preenchido!</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-3">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
                                 <div class="form-floating">
                                     <input class="form-control" type="text" id="cpf" placeholder=" ">
                                     <label for="cpf">CPF</label>
@@ -85,7 +78,19 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" type="email" id="email" name="email" placeholder=" ">
+                                    <label for="email">E-mail</label>
+                                    <div class="alert alert-danger alert-dismissible" id="alertaEmail">
+                                        <span>O e-mail deve ser preenchido!</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
                                 <div class="form-floating">
                                     <input class="form-control" type="number" id="idade" placeholder=" ">
                                     <label for="idade">Idade</label>
@@ -94,28 +99,21 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- sexo -->
-                        <!-- <div class="form-check">
-                            <div class="row" id="checkRadio">
-                                <div class="col">
-                                    <input class="form-check-input" type="radio" name="sexo" id="masculino">
-                                    <label class="form-check-label" for="masculino">Masculino</label>
-                                </div>
-                            </div>
-                            <div class="row" id="checkRadio">
-                                <div class="col">
-                                    <input class="form-check-input" type="radio" name="sexo" id="feminino">
-                                    <label class="form-check-label" for="feminino">Feminino</label>
-                                </div>
+
+                            <div class="col-sm-6">
+                                <select name="sexo" id="sexo" class="form-select">
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Feminino">Feminino</option>
+                                    <option value="Outro">Outro</option>
+                                </select>
                             </div>
                         </div>
-                    </fieldset> -->
-                    <!-- endereço -->
+                    </fieldset>
+
                     <fieldset>
                         <legend>Endereço</legend>
                         <div class="row">
-                            <div class="col-3">
+                            <div class="col-sm-6">
                                 <div class="form-floating">
                                     <input class="form-control" type="text" id="rua" name="rua" placeholder=" ">
                                     <label for="rua">Rua</label>
@@ -124,7 +122,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-sm-6">
                                 <div class="form-floating">
                                     <input class="form-control" type="text" id="bairro" name="bairro" placeholder=" ">
                                     <label for="bairro">Bairro</label>
@@ -133,7 +131,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-3">
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
                                 <div class="form-floating">
                                     <input class="form-control" type="text" id="cidade" name="cidade" placeholder=" ">
                                     <label for="cidade">Cidade</label>
@@ -142,21 +142,49 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-3">
+                            <div class="col-sm-6">
                                 <select class="form-select" name="estado" id="estado">
                                     <option value=""> Estado</option>
-                                    <!-- Opções de estado aqui -->
+                                    <option value=""> Estado</option>
+                                    <option value="AC">Acre</option>
+                                    <option value="AL">Alagoas</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="ES">Espírito Santo</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="RO">Rondônia</option>
+                                    <option value="RR">Roraima</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="SE">Sergipe</option>
+                                    <option value="TO">Tocantins</option>
                                 </select>
-                                <div class="alert alert-danger alert-dismissible" id="alertaEstado">
-                                    <span>O estado deve ser selecionado!</span>
-                                </div>
-                            </div>
-                        </div>
                     </fieldset>
-                    <button class="btn btn-primary col-sm-12 btn-success">Cadastrar</button>
+
+                    <div class="alert alert-danger alert-dismissible" id="alertaEstado">
+                        <span>O estado deve ser selecionado!</span>
+                    </div>
+
+                    <button class="btn btn-success col-sm-12">Cadastrar</button>
                 </div>
-            </form>
-            
+            </div>
+        </form>
+
         </div>
 
 

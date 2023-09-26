@@ -53,16 +53,13 @@ nav {
     z-index: 1;
     align-items: center;
     width: 100%;
-    position: fixed;
-    top: 0;
     font-size: 1.25rem;
 }
 
 
 nav li {
-    display: inline;
-    margin-left: 55px;
-    margin-right: 55px;
+    margin-left: 30px;
+    margin-right: 30px;
     font-weight: bold;
     text-align: center;
 }
@@ -73,9 +70,10 @@ nav li>a:hover {
     color: white;
 }
 
-.navbar-toggler{
+.navbar-toggler {
     margin-right: 20px;
 }
+
 /* ############# */
 
 .homePage {
@@ -132,7 +130,7 @@ nav li>a:hover {
 /* nome logomarca */
 #CliniSimples {
     margin-left: 10px;
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(202, 175, 146);
     font-weight: bold;
@@ -210,13 +208,16 @@ input.form-check-input:checked {
 /*###################*/
 
 
-
 /* cadastro */
 .cadastro {
     background-color: rgb(105, 137, 138);
     border-radius: 15px;
-    padding: 40px;
-    width: 1000px;
+    padding: 20px;
+    margin:20px;
+}
+
+.cadastro input{
+    margin-bottom: 5px;
 }
 
 .cadastro h3 {
@@ -224,10 +225,6 @@ input.form-check-input:checked {
     font-weight: bolder;
     margin-bottom: 20px;
 
-}
-
-#checkRadio {
-    margin-top: 10px;
 }
 
 .cadastro button {
