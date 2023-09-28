@@ -14,58 +14,61 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-xl navbar-dark fixed-top" id="navbar">
-        <a class="navbar-brand" href="./index.html">
-            <div class="d-flex align-items-center">
-                <img src="../../../assets/images/logo.jpg" class="logo" alt="Logomarca CiniSimples">
-                <h1 id="CliniSimples" class="ml-2">CliniSimples</h1>
+    <header>
+        <nav class="navbar navbar-expand-xl navbar-dark fixed-top" id="navbar">
+            <a class="navbar-brand" href="./index.html">
+                <div class="d-flex align-items-center">
+                    <img src="../../../assets/images/logo.jpg" class="logo" alt="Logomarca CiniSimples">
+                    <h1 id="CliniSimples" class="ml-2">CliniSimples</h1>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link color-white" href="../../../../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-white" href="./sobre.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-white" href="./cadastro.html">Cadastro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-white" href="./login.html">Login</a>
+                    </li>
+                </ul>
             </div>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        </nav>
+    </header>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link color-white" href="../../../../index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link color-white" href="./sobre.html">Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link color-white" href="./cadastro.html">Cadastro</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link color-white" href="./login.html">Login</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header>
-
-    <main class="paginaLogin">
-        <div class="container">
-            <h3>Login</h3>
-            <form class="row g-3" id="login">
-                <div class="col-sm-12 form-floating">
-                    <input type="email" name="email" class="form-control" id="email" placeholder=" " autofocus>
-                    <label for="email" class="form-label labelLogin">Email</label>
-                    <div class="alert alert-danger alert-dismissible" id="alertaEmail">
-                        <span>O email deve ser preenchido!</span>
+    <main>
+        <div class="paginaLogin">
+            <div class="container">
+                <h3>Login</h3>
+                <form class="row g-3" id="login">
+                    <div class="col-sm-12 form-floating">
+                        <input type="email" name="email" class="form-control" id="email" placeholder=" " autofocus>
+                        <label for="email" class="form-label labelLogin">Email</label>
+                        <div class="alert alert-danger alert-dismissible" id="alertaEmail">
+                            <span>O email deve ser preenchido!</span>
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-12 form-floating">
-                    <input type="password" name="senha" class="form-control" id="senha" placeholder=" ">
-                    <label for="senha" class="form-label labelLogin">Senha</label>
-                    <div class="alert alert-danger alert-dismissible" id="alertaSenha">
-                        <span>A senha deve ser preenchida!</span>
+                    <div class="col-sm-12 form-floating">
+                        <input type="password" name="senha" class="form-control" id="senha" placeholder=" ">
+                        <label for="senha" class="form-label labelLogin">Senha</label>
+                        <div class="alert alert-danger alert-dismissible" id="alertaSenha">
+                            <span>A senha deve ser preenchida!</span>
+                        </div>
                     </div>
-                </div>
-                <button class="btn btn-primary col-sm-12 btn-success" id="botao">Entrar</button>
-            </form>
+                    <button class="btn btn-primary col-sm-12 btn-success" id="botao">Entrar</button>
+                </form>
+            </div>
         </div>
     </main>
 
