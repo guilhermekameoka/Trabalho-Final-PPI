@@ -147,7 +147,7 @@ nav li>a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    margin: 10px;
     color: silver;
     padding: 40px;
     border-radius: 15px;
