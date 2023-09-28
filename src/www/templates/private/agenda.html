@@ -52,13 +52,29 @@
         <div class="container">
             <div class="agendamento table-responsive">
                 <h2>Agendamentos</h2>
+
+                <form>
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-sm-12 d-flex">
+                            <div class="form-floating flex-grow-1" id="pesquisa">
+                                <input class="form-control" type="text" id="nome" placeholder=" ">
+                                <label for="nome">Pesquisar...</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-success col-sm-2" id="botao-pesquisa">Buscar</button>
+                        </div>
+                    </div>
+                </form>
+
                 <table class="table table-striped centralizado">
                     <thead>
                         <tr class="text-center table-success">
                             <th>Data</th>
                             <th>Hora</th>
                             <th>Especialidade</th>
-                            <!-- <th>Descrição</th> -->
                             <th>Ação</th>
                         </tr>
                     </thead>
