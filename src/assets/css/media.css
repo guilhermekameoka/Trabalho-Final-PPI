@@ -2,12 +2,13 @@
 /* altura */
 
 @media screen and (max-height: 1400px) {
-    main{
+    main {
         margin-top: 98px;
         margin-bottom: 30px;
     }
-    
+
 }
+
 @media screen and (max-height: 1240px) {
     main {
         margin-top: 180px;
@@ -124,11 +125,18 @@
 
 
 /* largura */
-@media screen and (max-width: 912px) {
+@media screen and (max-width: 578px) {
+    #CliniSimples {
+        font-size: 1.9rem;
+    }
+
+    .logo {
+        height: 100px;
+        width: 100px;
+    }
 
     .paginaLogin {
-        width: 700px;
-        position: relative;
+        width: 450px;
     }
 }
 
@@ -136,8 +144,6 @@
 
     .paginaLogin {
         width: 400px;
-        position: relative;
-
     }
 }
 
@@ -260,7 +266,7 @@
 }
 
 @media screen and (max-width: 280px) {
-    
+
     .logo {
         width: 80px;
         height: 80px;
