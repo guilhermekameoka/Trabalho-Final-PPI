@@ -9,9 +9,11 @@
   <img src="https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white">  
 </div>
   
-Este repositório é dedicado ao trabalho final da disciplina GSI019 - Programação para Internet (PPI)
+Este repositório é dedicado ao trabalho final da disciplina GSI019 - Programação para Internet (PPI).  
+Acesse o site clicando neste 
+<a href="http://guilhermekameoka.42web.io/trabalho-final/index.html" target="_blank">link</a>.
 
-<img src="frontend.png">
+<img src="./frontend.png">
 
 ## Descrição
 
