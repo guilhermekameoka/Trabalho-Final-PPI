@@ -1,5 +1,13 @@
 /* media queries */
 /* altura */
+
+@media screen and (max-height: 1400px) {
+    main{
+        margin-top: 98px;
+        margin-bottom: 30px;
+    }
+    
+}
 @media screen and (max-height: 1240px) {
     main {
         margin-top: 180px;
