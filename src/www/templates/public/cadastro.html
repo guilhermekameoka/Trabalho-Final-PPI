@@ -106,10 +106,14 @@
 
                             <div class="col-sm-6">
                                 <select name="sexo" id="sexo" class="form-select">
+                                    <option value="">Sexo</option>
                                     <option value="Masculino">Masculino</option>
                                     <option value="Feminino">Feminino</option>
                                     <option value="Outro">Outro</option>
                                 </select>
+                                <div class="alert alert-danger alert-dismissible" id="alertaSexo">
+                                    <span>O sexo deve ser preenchido!</span>
+                                </div>
                             </div>
                         </div>
                     </fieldset>
@@ -149,7 +153,6 @@
                             <div class="col-sm-6">
                                 <select class="form-select" name="estado" id="estado">
                                     <option value=""> Estado</option>
-                                    <option value=""> Estado</option>
                                     <option value="AC">Acre</option>
                                     <option value="AL">Alagoas</option>
                                     <option value="AP">Amapá</option>
@@ -178,11 +181,11 @@
                                     <option value="SE">Sergipe</option>
                                     <option value="TO">Tocantins</option>
                                 </select>
+                                <div class="alert alert-danger alert-dismissible" id="alertaEstado">
+                                    <span>O estado deve ser selecionado!</span>
+                                </div>
                     </fieldset>
 
-                    <div class="alert alert-danger alert-dismissible" id="alertaEstado">
-                        <span>O estado deve ser selecionado!</span>
-                    </div>
 
                     <button class="btn btn-success col-sm-12" id="botao">Cadastrar</button>
                 </div>
