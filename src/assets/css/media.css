@@ -34,6 +34,10 @@
         font-size: 2rem;
     }
 
+    .agendamento {
+        margin-bottom: 20px;
+    }
+
     footer {
         margin-top: 0px;
     }
@@ -44,6 +48,10 @@
 @media screen and (max-height: 896px) {
     .homePage {
         margin-top: 155px;
+    }
+
+    .agendamento {
+        margin-bottom: 20px;
     }
 
     footer {
