@@ -81,18 +81,20 @@ nav li>a:hover {
 
 
 /* home page */
-.homePage {
-    flex: 0 auto;
+#homePage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    color: silver;
     margin: 10px;
-    padding: 20px;
+    color: silver;
+    padding: 40px;
     border-radius: 15px;
     background-color: rgb(105, 137, 138);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
-.homePage h2 {
+#homePage h2 {
     color: rgb(214, 188, 160);
     font-weight: bolder;
     font-size: 2rem;
@@ -128,7 +130,7 @@ nav li>a:hover {
     margin-bottom: 20px;
 }
 
-.boas-vindas a{
+.boas-vindas a {
     text-decoration: none;
     color: silver;
     background-color: rgba(138, 168, 134, 0.411);
@@ -136,10 +138,10 @@ nav li>a:hover {
     padding: 5px;
 }
 
-.boas-vindas li{
+.boas-vindas li {
     margin: 5px;
     list-style-type: none;
-    
+
 }
 
 .content {

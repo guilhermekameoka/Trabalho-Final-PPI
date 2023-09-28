@@ -1,43 +1,24 @@
 /* media queries */
 /* altura */
-@media screen and (max-height: 1368px) {
-    .homePage {
-        margin-top: 300px;
-    }
-}
+@media screen and (max-height: 1368px) {}
 
-@media screen and (max-height: 1280px) {
-    .homePage {
-        margin-top: 200px;
-    }
-}
+@media screen and (max-height: 1280px) {}
 
 @media screen and (max-height: 1240px) {
     main {
         margin-top: 180px;
     }
 
-    .homePage {
-        margin-top: 200px;
-    }
+
 }
 
-@media screen and (max-height: 1000px) {
-    .homePage {
-        margin-top: 250px;
-    }
-}
+@media screen and (max-height: 1000px) {}
 
 
 @media screen and (max-height: 915px) {
-    .homePage {
-        margin-top: 200px;
-        margin-bottom: 30px;
-    }
 
-    .homePage h2 {
-        font-size: 2rem;
-    }
+
+
 
     .agendamento {
         margin-bottom: 20px;
@@ -51,9 +32,7 @@
 
 
 @media screen and (max-height: 896px) {
-    .homePage {
-        margin-top: 205px;
-    }
+
 
     .agendamento {
         margin-bottom: 20px;
@@ -66,13 +45,7 @@
 }
 
 @media screen and (max-height: 844px) {
-    .homePage {
-        margin-top: 190px;
-    }
 
-    .homePage h2 {
-        font-size: 2rem;
-    }
 
     footer {
         margin-top: 0px;
@@ -87,16 +60,12 @@
         margin-bottom: 60px;
     }
 
-    .homePage {
-        margin-top: 175px;
-    }
+
 
 }
 
 @media screen and (max-height: 740px) {
-    .homePage {
-        margin-top: 190px;
-    }
+
 
     .agendamento {
         margin-bottom: 20px;
@@ -105,13 +74,9 @@
 }
 
 @media screen and (max-height: 720px) {
-    .homePage {
-        margin-top: 210px;
-    }
 
-    .homePage h2 {
-        font-size: 2rem;
-    }
+
+
 
     .agendamento {
         margin-top: 20px;
@@ -131,9 +96,7 @@
         margin-bottom: 40px;
     }
 
-    .homePage {
-        margin-top: 180px;
-    }
+
 
     .agendamento {
         margin-bottom: 20px;
@@ -151,9 +114,7 @@
         margin-bottom: 40px;
     }
 
-    .homePage {
-        margin-top: 170px;
-    }
+
 
     .agendamento {
         margin-bottom: 60px;
@@ -173,11 +134,7 @@
 
 
 /* largura */
-@media screen and (max-width: 1024px) {
-    .homePage {
-        padding: 40px;
-    }
-}
+@media screen and (max-width: 1024px) {}
 
 
 @media screen and (max-width: 912px) {
@@ -205,6 +162,17 @@
         font-size: 2.3rem;
     }
 
+    #homePage h2 {
+        font-size: 1.6rem;
+
+    }
+
+    #homePage p,
+    #homePage li {
+        font-size: 1.2rem;
+
+    }
+
     nav li {
         font-size: 1.2rem;
     }
@@ -229,8 +197,15 @@
 
     }
 
-    .homePage h2 {
-        font-size: 1.8rem;
+    #homePage h2 {
+        font-size: 1.6rem;
+
+    }
+
+    #homePage p,
+    #homePage li {
+        font-size: 1.2rem;
+
     }
 
     .content {
@@ -242,7 +217,7 @@
         font-size: 1.5rem;
     }
 
-    .boas-vindas h2{
+    .boas-vindas h2 {
         font-size: 1.8rem;
 
     }
@@ -263,9 +238,17 @@
         font-size: 1rem;
     }
 
-    .homePage h2 {
-        font-size: 1.7rem;
+    #homePage h2 {
+        font-size: 1.55rem;
+
     }
+
+    #homePage p,
+    #homePage li {
+        font-size: 1.2rem;
+
+    }
+
 }
 
 @media screen and (max-width: 300px) {
@@ -293,6 +276,17 @@
         font-size: 1.5rem;
     }
 
+    #homePage h2 {
+        font-size: 1rem;
+
+    }
+
+    #homePage p,
+    #homePage li {
+        font-size: 1rem;
+
+    }
+
     nav li {
         font-size: 1rem;
     }
@@ -310,7 +304,5 @@
     }
 
 
-    .homePage h2 {
-        font-size: 1.2rem;
-    }
+
 }
