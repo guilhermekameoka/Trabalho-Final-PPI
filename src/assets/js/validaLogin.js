@@ -1,34 +1,25 @@
+console.log("funcionou");
+
+import { validaInput } from "./validaInput.js";
+import { addEventListener } from "./eventListener.js";
+
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("login");
-    
-    const emailInput = document.getElementById("email");
-    const senhaInput = document.getElementById("senha");
-    const alertaEmail = document.getElementById("alertaEmail");
-    const alertaSenha = document.getElementById("alertaSenha");
+    const form = document.querySelector("form");
+
+    const campos = [
+        { input: document.getElementById("email"), alerta: document.getElementById("alertaEmail") },
+        { input: document.getElementById("senha"), alerta: document.getElementById("alertaSenha") }
+    ];
 
     form.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        alertaEmail.style.display = "none";
-        alertaSenha.style.display = "none";
-
-        if (emailInput.value === "") {
-            alertaEmail.style.display = "block";
-        }
-        if (senhaInput.value === "") {
-            alertaSenha.style.display = "block";
-        }
+        campos.forEach(({ input, alerta }) => {
+            validaInput(input, alerta);
+        });
     });
 
-    emailInput.addEventListener("input", function () {
-        if (emailInput.value !== "") {
-            alertaEmail.style.display = "none";
-        }
-    });
-
-    senhaInput.addEventListener("input", function () {
-        if (senhaInput.value !== "") {
-            alertaSenha.style.display = "none";
-        }
+    campos.forEach(({ input, alerta }) => {
+        addEventListener(input, alerta);
     });
 });
