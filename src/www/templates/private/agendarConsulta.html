@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/media.css">
+    <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
+    <script src="../../../assets/js/validaAgendamento.js"></script>
+    <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+    <title>Agendar Consulta</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top ">
+            <table>
+                <tr>
+                    <td>
+                        <a class="nav-link active col-1" href="../../../../index.html">
+                            <img src="../../../assets/images/logo.jpg" class="logo" alt="Logomarca CiniSimples">
+                        </a>
+                    </td>
+                    <td>
+                        <h1 id="CliniSimples">CliniSimples</h1>
+                    </td>
+                </tr>
+            </table>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link color-white" href="../../../../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-white" href="../public/sobre.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-white" href="../public/cadastro.html">Cadastro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-white" href="../public/login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="agendamento">
+                <h3>Agendar Consulta</h3>
+                <form>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <select class="form-select" name="especialidade" id="especialidade">
+                                <option value=""> Especialidade</option>
+                                <option value="nutricionista">Nutricionista</option>
+                                <option value="psicologo">Psicólogo</option>
+                                <option value="endocrinologista">Endócrinologista</option>
+                                <option value="psiquiatra">Psiquiatra</option>
+                            </select>
+
+                            <div class="alert alert-danger alert-dismissible" id="alertaEspecialidade">
+                                <span>A especialidade deve ser selecionada!</span>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-floating">
+                                <input type="date" name="data" id="data" class="form-control" placeholder=" ">
+                                <label for="data">Data</label>
+                            </div>
+
+                            <div class="alert alert-danger alert-dismissible" id="alertaData">
+                                <span>A data deve ser selecionada!</span>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <select class="form-select" name="horario" id="horario">
+                                <option value="">Horário</option>
+                                <option value="nutricionista">7:00 às 8:00</option>
+                                <option value="nutricionista">8:00 às 9:00</option>
+                                <option value="nutricionista">9:00 às 10:00</option>
+                                <option value="nutricionista">10:00 às 11:00</option>
+                                <option value="nutricionista">11:00 às 12:00</option>
+                                <option value="nutricionista">12:00 às 13:00</option>
+                                <option value="nutricionista">13:00 às 14:00</option>
+                                <option value="nutricionista">14:00 às 15:00</option>
+                                <option value="nutricionista">15:00 às 16:00</option>
+                                <option value="nutricionista">16:00 às 17:00</option>
+                                <option value="nutricionista">17:00 às 18:00</option>
+                            </select>
+
+                            <div class="alert alert-danger alert-dismissible" id="alertaHorario">
+                                <span>O horário deve ser selecionado!</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="form-floating">
+                                <input class="form-control" type="text" id="nome" placeholder=" " autofocus>
+                                <label for="nome">Nome</label>
+
+                                <div class="alert alert-danger alert-dismissible" id="alertaNome">
+                                    <span>O nome deve ser preenchido!</span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="form-floating">
+                                <input class="form-control" type="email" id="email" name="email" placeholder=" ">
+                                <label for="email">E-mail</label>
+                                <div class="alert alert-danger alert-dismissible" id="alertaEmail">
+                                    <span>O e-mail deve ser preenchido!</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <select name="sexo" id="sexo" class="form-select">
+                                <option value="">Sexo</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Feminino">Feminino</option>
+                                <option value="Outro">Outro</option>
+                            </select>
+                            <div class="alert alert-danger alert-dismissible" id="alertaSexo">
+                                <span>O sexo deve ser preenchido!</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-success col-sm-12" id="botao">Agendar</button>
+                </form>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>CliniSimples - Trabalho final PPI</p>
+    </footer>
+</body>
+
+</html>
