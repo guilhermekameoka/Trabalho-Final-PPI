@@ -30,7 +30,6 @@ main {
     align-items: center;
 }
 
-
 footer {
     display: flex;
     flex-direction: row;
@@ -182,5 +181,4 @@ nav li>a:hover {
     font-weight: bold;
     text-decoration: none;
     margin-right: 50px;
-
 }
