@@ -77,9 +77,6 @@ nav li>a:hover {
     margin-left: 2%;
 }
 
-/* ############# */
-
-
 /* home page */
 #homePage {
     display: flex;
@@ -101,6 +98,7 @@ nav li>a:hover {
 
 }
 
+/* home page restrita */
 .boas-vindas {
     align-items: center;
     display: flex;
@@ -144,6 +142,7 @@ nav li>a:hover {
 
 }
 
+/* sobre */
 .content {
     display: flex;
     flex-direction: column;
@@ -163,7 +162,6 @@ nav li>a:hover {
     margin-bottom: 20px;
     font-size: 2rem;
 }
-
 
 /* logomarca */
 .logo {
@@ -185,136 +183,4 @@ nav li>a:hover {
     text-decoration: none;
     margin-right: 50px;
 
-}
-
-/* botao de login no canto direito */
-#linkLogin {
-    margin-left: auto;
-    margin-right: 60px;
-}
-
-/* ################ */
-
-
-
-
-/* formularios */
-input.form-control:focus,
-select.form-select:focus,
-input.form-check-input:checked {
-    border-color: rgb(158, 187, 158);
-    box-shadow: 0 0 0 0.2rem rgb(158, 187, 158);
-}
-
-/* ################# */
-
-
-
-/* login */
-.paginaLogin {
-    display: flex;
-    flex-direction: column;
-    flex: 0 auto;
-    margin: auto;
-    width: 500px;
-    border-radius: 15px;
-    padding: 20px;
-    background-color: rgb(105, 137, 138);
-}
-
-.paginaLogin input {
-    margin-bottom: 5px;
-}
-
-.paginaLogin h3 {
-    color: rgb(214, 188, 160);
-    font-weight: bolder;
-    margin-bottom: 20px;
-}
-
-.labelLogin {
-    padding: 20px;
-    color: lightgrey;
-    margin-left: 10px;
-}
-
-
-#alertaEmail,
-#alertaSenha,
-#alertaNome,
-#alertaCpf,
-#alertaIdade,
-#alertaSexo,
-#alertaRua,
-#alertaBairro,
-#alertaCidade,
-#alertaEstado,
-#alertaEspecialidade,
-#alertaData,
-#alertaHorario {
-    margin-top: 5px;
-    display: none;
-    color: red;
-}
-
-/*###################*/
-
-
-/* cadastro */
-.cadastro {
-    background-color: rgb(105, 137, 138);
-    border-radius: 15px;
-    padding: 20px;
-    margin: 20px;
-}
-
-.cadastro input {
-    margin-bottom: 5px;
-}
-
-.cadastro h3 {
-    color: rgb(214, 188, 160);
-    font-weight: bolder;
-    margin-bottom: 20px;
-
-}
-
-.cadastro button {
-    margin-top: 30px;
-}
-
-legend {
-    margin: 10px 0;
-    color: rgb(216, 194, 170);
-}
-
-#botao {
-    width: 100%;
-}
-
-/* ##################### */
-
-/* agendamento */
-.agendamento {
-    background-color: rgb(105, 137, 138);
-    border-radius: 15px;
-    padding: 20px;
-}
-
-.agendamento input {
-    margin-bottom: 10px;
-}
-
-.agendamento select {
-    margin-bottom: 10px;
-}
-
-.agendamento h3 {
-    color: rgb(214, 188, 160);
-    font-weight: bolder;
-    margin-bottom: 20px;
-}
-
-.agendamento button {
-    margin-top: 20px;
 }
