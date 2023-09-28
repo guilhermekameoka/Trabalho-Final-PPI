@@ -17,10 +17,17 @@
     }
 }
 
+@media screen and (max-height: 1000px) {
+    .homePage {
+        margin-top: 250px;
+    }
+}
+
 
 @media screen and (max-height: 915px) {
     .homePage {
-        margin-top: 160px;
+        margin-top: 200px;
+        margin-bottom: 30px;
     }
 
     .homePage h2 {
@@ -37,7 +44,6 @@
 @media screen and (max-height: 896px) {
     .homePage {
         margin-top: 155px;
-        border-radius: 0px;
     }
 
     footer {
@@ -49,7 +55,6 @@
 @media screen and (max-height: 844px) {
     .homePage {
         margin-top: 150px;
-        border-radius: 0px;
     }
 
     .homePage h2 {
@@ -70,7 +75,6 @@
     }
 
     .homePage {
-        border-radius: 15px;
         margin-top: 175px;
     }
 
@@ -78,21 +82,29 @@
 
 @media screen and (max-height: 740px) {
     .homePage {
-        border-radius: 15px;
         margin-top: 130px;
+    }
+
+    .agendamento {
+        margin-bottom: 20px;
     }
 
 }
 
 @media screen and (max-height: 720px) {
     .homePage {
-        margin-top: 135px;
-        border-radius: 0px;
+        margin-top: 150px;
     }
 
     .homePage h2 {
         font-size: 2rem;
     }
+
+    .agendamento {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
 
     footer {
         margin-top: 0px;
@@ -108,7 +120,10 @@
 
     .homePage {
         margin-top: 150px;
-        border-radius: 0px;
+    }
+
+    .agendamento {
+        margin-bottom: 20px;
     }
 
     footer {
@@ -125,7 +140,10 @@
 
     .homePage {
         margin-top: 135px;
-        border-radius: 0px;
+    }
+
+    .agendamento {
+        margin-bottom: 60px;
     }
 
 }
