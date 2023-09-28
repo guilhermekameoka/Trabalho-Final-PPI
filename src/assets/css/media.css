@@ -48,17 +48,6 @@
 
 }
 
-@media screen and (max-height: 800px) {
-
-    .paginaLogin {
-        margin-top: 260px;
-        margin-bottom: 60px;
-    }
-
-
-
-}
-
 @media screen and (max-height: 740px) {
 
     .agendamento {
@@ -82,10 +71,6 @@
 }
 
 @media screen and (max-height: 667px) {
-    .paginaLogin {
-        margin-top: 220px;
-        margin-bottom: 40px;
-    }
 
     .agendamento {
         margin-bottom: 20px;
@@ -98,26 +83,12 @@
 }
 
 @media screen and (max-height: 653px) {
-    .paginaLogin {
-        margin-top: 200px;
-        margin-bottom: 40px;
-    }
 
     .agendamento {
         margin-bottom: 60px;
     }
 
 }
-
-@media screen and (max-height: 600px) {
-
-    .paginaLogin {
-        margin-top: 190px;
-        margin-bottom: 40px;
-    }
-
-}
-
 
 
 
@@ -133,17 +104,6 @@
     .logo {
         height: 100px;
         width: 100px;
-    }
-
-    .paginaLogin {
-        width: 450px;
-    }
-}
-
-@media screen and (max-width: 540px) {
-
-    .paginaLogin {
-        width: 400px;
     }
 }
 
@@ -187,11 +147,6 @@
 
     nav li {
         font-size: 1.2rem;
-    }
-
-    .paginaLogin {
-        width: 350px;
-
     }
 
     #homePage h2 {
@@ -289,10 +244,6 @@
 
     nav li {
         font-size: 1rem;
-    }
-
-    .paginaLogin {
-        width: 260px;
     }
 
     .content {

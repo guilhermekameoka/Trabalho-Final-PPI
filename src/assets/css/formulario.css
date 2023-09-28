@@ -15,8 +15,7 @@ input.form-check-input:checked {
     display: flex;
     flex-direction: column;
     flex: 0 auto;
-    margin: auto;
-    width: 500px;
+    margin: auto 10px;
     border-radius: 15px;
     padding: 20px;
     background-color: rgb(105, 137, 138);
