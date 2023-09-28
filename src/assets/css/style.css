@@ -75,6 +75,20 @@ nav li>a:hover {
     margin-left: 2%;
 }
 
+
+
+/* tabela de agendamentos */
+.centralizado {
+    text-align: center;
+}
+
+#botao-tabela {
+    margin: 5px;
+}
+
+/* ####################### */
+
+
 /* home page */
 #homePage {
     display: flex;
