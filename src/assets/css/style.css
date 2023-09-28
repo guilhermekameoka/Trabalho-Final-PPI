@@ -84,8 +84,8 @@ nav li>a:hover {
 .homePage {
     flex: 0 auto;
     align-items: center;
-    margin: auto;
     color: silver;
+    margin: 10px;
     padding: 20px;
     border-radius: 15px;
     background-color: rgb(105, 137, 138);

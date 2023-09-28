@@ -1,5 +1,10 @@
 /* media queries */
 /* altura */
+@media screen and (max-height: 1368px) {
+    .homePage {
+        margin-top: 300px;
+    }
+}
 
 @media screen and (max-height: 1280px) {
     .homePage {
@@ -47,7 +52,7 @@
 
 @media screen and (max-height: 896px) {
     .homePage {
-        margin-top: 155px;
+        margin-top: 205px;
     }
 
     .agendamento {
@@ -62,7 +67,7 @@
 
 @media screen and (max-height: 844px) {
     .homePage {
-        margin-top: 150px;
+        margin-top: 190px;
     }
 
     .homePage h2 {
@@ -90,7 +95,7 @@
 
 @media screen and (max-height: 740px) {
     .homePage {
-        margin-top: 130px;
+        margin-top: 190px;
     }
 
     .agendamento {
@@ -101,7 +106,7 @@
 
 @media screen and (max-height: 720px) {
     .homePage {
-        margin-top: 150px;
+        margin-top: 210px;
     }
 
     .homePage h2 {
@@ -127,7 +132,7 @@
     }
 
     .homePage {
-        margin-top: 150px;
+        margin-top: 180px;
     }
 
     .agendamento {
@@ -147,7 +152,7 @@
     }
 
     .homePage {
-        margin-top: 135px;
+        margin-top: 170px;
     }
 
     .agendamento {
