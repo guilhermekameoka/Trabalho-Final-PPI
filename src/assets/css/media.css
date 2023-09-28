@@ -237,6 +237,11 @@
         font-size: 1.5rem;
     }
 
+    .boas-vindas h2{
+        font-size: 1.8rem;
+
+    }
+
 }
 
 @media screen and (max-width: 360px) {

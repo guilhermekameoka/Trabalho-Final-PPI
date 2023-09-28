@@ -99,6 +99,49 @@ nav li>a:hover {
 
 }
 
+.boas-vindas {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: silver;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgb(105, 137, 138);
+    font-size: 1.2rem;
+}
+
+.boas-vindas h2 {
+    color: rgb(214, 188, 160);
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.boas-vindas img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.boas-vindas a{
+    text-decoration: none;
+    color: silver;
+    background-color: rgba(138, 168, 134, 0.411);
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.boas-vindas li{
+    margin: 5px;
+    list-style-type: none;
+    
+}
+
 .content {
     display: flex;
     flex-direction: column;
