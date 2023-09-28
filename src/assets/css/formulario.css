@@ -59,6 +59,7 @@ input.form-check-input:checked {
 /*###################*/
 
 
+
 /* cadastro */
 .cadastro {
     background-color: rgb(105, 137, 138);
@@ -93,6 +94,9 @@ legend {
 
 /* ##################### */
 
+
+
+
 /* agendamento */
 .agendamento {
     background-color: rgb(105, 137, 138);
@@ -120,3 +124,17 @@ legend {
 }
 
 /* ################### */
+
+
+
+
+/* pesquisa */
+#pesquisa input {
+    margin-bottom: 5px;
+}
+
+#pesquisa label {
+    color: silver;
+}
+
+/* ################# */
