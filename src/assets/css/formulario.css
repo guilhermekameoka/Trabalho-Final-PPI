@@ -10,56 +10,6 @@ input.form-check-input:checked {
 
 
 
-/* login */
-.paginaLogin {
-    display: flex;
-    flex-direction: column;
-    flex: 0 auto;
-    margin: auto 10px;
-    border-radius: 15px;
-    padding: 20px;
-    background-color: rgb(105, 137, 138);
-}
-
-.paginaLogin input {
-    margin-bottom: 5px;
-}
-
-.paginaLogin h3 {
-    color: rgb(214, 188, 160);
-    font-weight: bolder;
-    margin-bottom: 20px;
-}
-
-.labelLogin {
-    padding: 20px;
-    color: lightgrey;
-    margin-left: 10px;
-}
-
-
-#alertaEmail,
-#alertaSenha,
-#alertaNome,
-#alertaCpf,
-#alertaIdade,
-#alertaSexo,
-#alertaRua,
-#alertaBairro,
-#alertaCidade,
-#alertaEstado,
-#alertaEspecialidade,
-#alertaData,
-#alertaHorario {
-    margin-top: 5px;
-    display: none;
-    color: red;
-}
-
-/*###################*/
-
-
-
 /* cadastro */
 .cadastro {
     background-color: rgb(105, 137, 138);
@@ -94,6 +44,55 @@ legend {
 
 /* ##################### */
 
+/* login */
+.paginaLogin {
+    display: flex;
+    flex-direction: column;
+    flex: 0 auto;
+    margin: auto 10px;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: rgb(105, 137, 138);
+}
+
+.paginaLogin input {
+    margin-bottom: 5px;
+}
+
+.paginaLogin h3 {
+    color: rgb(214, 188, 160);
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.labelLogin {
+    padding: 20px;
+    color: lightgrey;
+    margin-left: 10px;
+}
+
+
+
+/* alertas */
+#alertaEmail,
+#alertaSenha,
+#alertaNome,
+#alertaCpf,
+#alertaIdade,
+#alertaSexo,
+#alertaRua,
+#alertaBairro,
+#alertaCidade,
+#alertaEstado,
+#alertaEspecialidade,
+#alertaData,
+#alertaHorario {
+    margin-top: 5px;
+    display: none;
+    color: red;
+}
+
+/*###################*/
 
 
 
@@ -124,7 +123,6 @@ legend {
 }
 
 /* ################### */
-
 
 
 
