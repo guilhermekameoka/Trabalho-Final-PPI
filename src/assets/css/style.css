@@ -102,7 +102,6 @@ nav li>a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10px;
     padding: 25px;
     border-radius: 15px;
     background-color: rgb(105, 137, 138);
@@ -132,9 +131,6 @@ nav li>a:hover {
 }
 
 .excluir-conta {
-    display: flex;
-    justify-content: end;
-    align-items: center;
     margin-top: 40px;
 }
 
