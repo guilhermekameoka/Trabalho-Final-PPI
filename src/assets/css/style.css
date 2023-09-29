@@ -94,6 +94,14 @@ nav li>a:hover {
 
 /* ####################### */
 
+.perfil {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    border: solid 4px rgb(101, 138, 116);
+    margin: 15px;
+}
+
 
 /* home page */
 #homePage {
