@@ -218,6 +218,10 @@
 
     }
 
+    .perfil td,
+    .perfil th {
+        font-size: 11px;
+    }
 }
 
 @media screen and (max-width: 300px) {
@@ -269,4 +273,11 @@
     .content h3 {
         font-size: 1.3rem;
     }
+
+    .perfil td,
+    .perfil th,
+    .perfil td>button {
+        font-size: 8.4px;
+    }
+
 }
