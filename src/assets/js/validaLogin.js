@@ -1,5 +1,3 @@
-console.log("funcionou");
-
 import { validaInput } from "./validaInput.js";
 import { addEventListener } from "./eventListener.js";
 
