@@ -27,6 +27,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 200px;
+    margin-bottom: 30px;
 }
 
 footer {
@@ -48,7 +50,6 @@ footer {
 
 /* navegacao */
 nav {
-    margin: auto;
     background-color: rgb(43, 100, 102);
     z-index: 1;
     align-items: center;
@@ -190,13 +191,13 @@ nav li>a:hover {
 .boas-vindas a {
     text-decoration: none;
     color: silver;
-    background-color: rgba(138, 168, 134, 0.411);
-    border-radius: 15px;
-    padding: 5px;
+    background-color: rgba(57, 151, 112, 0.616);
+    border-radius: 12px;
+    padding: 6px;
 }
 
 .boas-vindas li {
-    margin: 5px;
+    margin: 10px;
     list-style-type: none;
 
 }
