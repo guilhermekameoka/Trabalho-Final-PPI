@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const campos = [
         { input: document.getElementById("nome"), alerta: document.getElementById("alertaNome") },
         { input: document.getElementById("email"), alerta: document.getElementById("alertaEmail") },
+        { input: document.getElementById("senha"), alerta: document.getElementById("alertaSenha") },
         { input: document.getElementById("cpf"), alerta: document.getElementById("alertaCpf") },
         { input: document.getElementById("idade"), alerta: document.getElementById("alertaIdade") },
         { input: document.getElementById("sexo"), alerta: document.getElementById("alertaSexo") },
