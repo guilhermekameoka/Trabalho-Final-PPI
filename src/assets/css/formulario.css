@@ -72,14 +72,12 @@ legend {
     margin-left: 10px;
 }
 
-
-
 /* alertas */
 #alertaEmail,
 #alertaSenha,
 #alertaNome,
 #alertaCpf,
-#alertaIdade,
+#alertaDataNascimento,
 #alertaSexo,
 #alertaTelefone,
 #alertaRua,
