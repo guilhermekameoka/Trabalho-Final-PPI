@@ -18,7 +18,8 @@ input.form-check-input:checked {
     margin: 20px;
 }
 
-.cadastro input {
+.cadastro input,
+.cadastro select {
     margin-bottom: 5px;
 }
 
@@ -86,7 +87,12 @@ legend {
 #alertaEstado,
 #alertaEspecialidade,
 #alertaData,
-#alertaHorario {
+#alertaHorario,
+#alertaSenha,
+#alertaEspecialidade,
+#alertaCRP,
+#alertaCRN,
+#alertaCRM {
     margin-top: 5px;
     display: none;
     color: red;
