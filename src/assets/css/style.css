@@ -154,22 +154,22 @@ nav li>a:hover {
 
 }
 
+#banner {
+    width: 300px;
+    height: 300px;
+
+}
+
 /* home page restrita */
 .boas-vindas {
     align-items: center;
     display: flex;
     justify-content: center;
-    align-items: center;
     text-align: center;
-    color: silver;
-    margin-top: 15px;
-    margin-bottom: 25px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 20px;
+    margin: auto;
+    padding-top: 20px;
     border-radius: 15px;
     background-color: rgb(105, 137, 138);
-    font-size: 1.2rem;
 }
 
 .boas-vindas h2 {
@@ -178,24 +178,22 @@ nav li>a:hover {
     font-size: 2rem;
 }
 
+.boas-vindas h3 {
+    color: silver;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
 .boas-vindas img {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 20px;
+    width: 160px;
+    height: 160px;
+    margin-top: 20px;
 }
 
 .boas-vindas a {
     text-decoration: none;
     color: silver;
-    background-color: rgba(57, 151, 112, 0.616);
-    border-radius: 12px;
-    padding: 6px;
-}
-
-.boas-vindas li {
-    margin: 10px;
-    list-style-type: none;
-
+    margin: 20px;
 }
 
 /* sobre */
