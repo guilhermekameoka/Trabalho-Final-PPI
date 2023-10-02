@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="../../../assets/css/formulario.css">
     <link rel="stylesheet" href="../../../assets/css/media.css">
     <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
-    <script type="module" src="../../../assets/js/validaCadastro.js"></script>
+    <script type="module" src="../../../assets/js/validaCadastroFuncionario.js"></script>
+    <script src="../../../assets/js/conselhoRegional.js"></script>
     <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+
     <title>Cadastro</title>
 </head>
 
@@ -56,7 +58,7 @@
                     <fieldset>
                         <legend>Dados pessoais</legend>
                         <div class="row">
-                            <div class="col-sm-12">
+                            <div class="col-sm-6">
                                 <div class="form-floating">
                                     <input class="form-control" type="text" id="nome" placeholder=" " autofocus>
                                     <label for="nome">Nome</label>
@@ -65,9 +67,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-floating">
                                     <input class="form-control" type="text" id="cpf" placeholder=" ">
@@ -77,23 +76,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="form-floating">
-                                    <input class="form-control" type="email" id="email" name="email" placeholder=" ">
-                                    <label for="email">E-mail</label>
-                                    <div class="alert alert-danger alert-dismissible" id="alertaEmail">
-                                        <span>O e-mail deve ser preenchido!</span>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
 
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input class="form-control" type="date" id="idade">
-                                    <label for="idade">Data de nascimento</label>
-                                    <div class="alert alert-danger alert-dismissible" id="alertaIdade">
+                                    <input class="form-control" type="date" id="data-nascimento">
+                                    <label for="data-nascimento">Data de nascimento</label>
+                                    <div class="alert alert-danger alert-dismissible" id="alertaDataNascimento">
                                         <span>A data de nascimento deve ser preenchida!</span>
                                     </div>
                                 </div>
@@ -111,6 +101,27 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" type="email" id="email" name="email" placeholder=" ">
+                                    <label for="email">E-mail</label>
+                                    <div class="alert alert-danger alert-dismissible" id="alertaEmail">
+                                        <span>O e-mail deve ser preenchido!</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" type="password" id="senha" name="senha" placeholder=" ">
+                                    <label for="senha">Senha</label>
+                                    <div class="alert alert-danger alert-dismissible" id="alertaSenha">
+                                        <span>A senha deve ser preenchida!</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </fieldset>
 
                     <fieldset>
@@ -124,13 +135,54 @@
                                     <option value="endocrinologista">Endócrinologista</option>
                                     <option value="psiquiatra">Psiquiatra</option>
                                 </select>
-                                <div class="alert alert-danger alert-dismissible" id="alertaSexo">
+                                <div class="alert alert-danger alert-dismissible" id="alertaEspecialidade">
                                     <span>A especialidade deve ser preenchida!</span>
                                 </div>
                             </div>
+                            <div class="col-sm-6" id="crp">
+                                <div class="form-floating">
+                                    <input class="form-control" type="text" id="CRP" name="crp" placeholder=" ">
+                                    <label for="rua">CRP</label>
+                                    <div class="alert alert-danger alert-dismissible" id="alertaCRP">
+                                        <span>O CRP deve ser preenchido!</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6" id="crn">
+                                <div class="form-floating">
+                                    <input class="form-control" type="text" id="CRN" name="crn" placeholder=" ">
+                                    <label for="rua">CRN</label>
+                                    <div class="alert alert-danger alert-dismissible" id="alertaCRN">
+                                        <span>O CRN deve ser preenchido!</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6" id="crm">
+                                <div class="form-floating">
+                                    <input class="form-control" type="text" id="CRM" name="crm" placeholder=" ">
+                                    <label for="rua">CRM</label>
+                                    <div class="alert alert-danger alert-dismissible" id="alertaCRM">
+                                        <span>O CRM deve ser preenchido!</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    </fieldset>
 
-
+                    <fieldset>
+                        <legend>Informações de contato</legend>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input class="form-control" type="text" id="telefone" name="telefone"
+                                        placeholder=" ">
+                                    <label for="rua">Telefone</label>
+                                    <div class="alert alert-danger alert-dismissible" id="alertaTelefone">
+                                        <span>O telefone deve ser preenchido!</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </fieldset>
 
                     <fieldset>
