@@ -155,8 +155,9 @@ nav li>a:hover {
 }
 
 #banner {
-    width: 300px;
-    height: 300px;
+    width: 320px;
+    height: 320px;
+    margin-bottom: 30px;
 
 }
 
@@ -185,8 +186,8 @@ nav li>a:hover {
 }
 
 .boas-vindas img {
-    width: 160px;
-    height: 160px;
+    width: 120px;
+    height: 120px;
     margin-top: 20px;
 }
 

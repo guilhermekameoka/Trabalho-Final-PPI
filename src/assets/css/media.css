@@ -193,6 +193,34 @@
     .perfil th {
         font-size: 11px;
     }
+
+    #banner {
+        width: 250px;
+        height: 250px;
+    }
+
+    .boas-vindas img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .boas-vindas h2 {
+        font-size: 1.5rem;
+    }
+
+    .boas-vindas h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 330px) {
+
+    .agendamento td,
+    .agendamento th,
+    .agendamento button {
+        font-size: 8.4px;
+    }
+
 }
 
 @media screen and (max-width: 300px) {
@@ -209,14 +237,6 @@
     nav li {
         font-size: 1rem;
     }
-}
-@media screen and (max-width: 330px) {
-    .agendamento td,
-    .agendamento th,
-    .agendamento button {
-        font-size: 8.4px;
-    }
-    
 }
 
 @media screen and (max-width: 280px) {
@@ -263,24 +283,6 @@
     .agendamento th,
     .agendamento button {
         font-size: 8.4px;
-    }
-
-    #banner{
-        width: 250px;
-        height: 250px;
-    }
-
-    .boas-vindas img{
-        width: 110px;
-        height: 110px;
-    }
-
-    .boas-vindas h2{
-        font-size: 1.5rem;
-    }
-
-    .boas-vindas h3{
-        font-size: 1.2rem;
     }
 
 }
