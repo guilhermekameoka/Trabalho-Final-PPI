@@ -1,5 +1,5 @@
 import { validaInput } from "./validaInput.js";
-import { addEventListener } from "./eventListener.js";
+import { checaValorInput } from "./checaValorInput.js";
 
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("form");
@@ -22,6 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     campos.forEach(({ input, alerta }) => {
-        addEventListener(input, alerta);
+        checaValorInput(input, alerta);
     });
 });
