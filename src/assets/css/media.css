@@ -161,6 +161,11 @@
 
     }
 
+    .pre-cadastro img {
+        height: 180px;
+        width: 180px;
+    }
+
 }
 
 @media screen and (max-width: 360px) {
@@ -211,6 +216,7 @@
     .boas-vindas h3 {
         font-size: 1.2rem;
     }
+
 }
 
 @media screen and (max-width: 330px) {
@@ -221,6 +227,15 @@
         font-size: 8.4px;
     }
 
+    .pre-cadastro h2 {
+        font-size: 19px;
+    }
+
+    .pre-cadastro img{
+        height: 160px;
+        width: 160px;
+
+    }
 }
 
 @media screen and (max-width: 300px) {
