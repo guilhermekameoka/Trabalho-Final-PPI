@@ -55,95 +55,141 @@
             <div class="agendamento">
                 <h3>Agendar Consulta</h3>
                 <form>
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <select class="form-select" name="especialidade" id="especialidade">
-                                <option value=""> Especialidade</option>
-                                <option value="nutricionista">Nutricionista</option>
-                                <option value="psicologo">Psicólogo</option>
-                                <option value="endocrinologista">Endócrinologista</option>
-                                <option value="psiquiatra">Psiquiatra</option>
-                            </select>
+                    <fieldset>
+                        <legend>Informações da consulta</legend>
 
-                            <div class="alert alert-danger alert-dismissible" id="alertaEspecialidade">
-                                <span>A especialidade deve ser selecionada!</span>
-                            </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <select class="form-select" name="especialidade" id="especialidade">
+                                    <option value=""> Especialidade</option>
+                                    <option value="nutricionista">Nutricionista</option>
+                                    <option value="psicologo">Psicólogo</option>
+                                    <option value="endocrinologista">Endócrinologista</option>
+                                    <option value="psiquiatra">Psiquiatra</option>
+                                </select>
 
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="form-floating">
-                                <input type="date" name="data" id="data" class="form-control">
-                                <label for="data">Data</label>
-                            </div>
-
-                            <div class="alert alert-danger alert-dismissible" id="alertaData">
-                                <span>A data deve ser selecionada!</span>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-4">
-                            <select class="form-select" name="horario" id="horario">
-                                <option value="">Horário</option>
-                                <option value="nutricionista">7:00 - 8:00</option>
-                                <option value="nutricionista">8:00 - 9:00</option>
-                                <option value="nutricionista">9:00 - 10:00</option>
-                                <option value="nutricionista">10:00 - 11:00</option>
-                                <option value="nutricionista">11:00 - 12:00</option>
-                                <option value="nutricionista">12:00 - 13:00</option>
-                                <option value="nutricionista">13:00 - 14:00</option>
-                                <option value="nutricionista">14:00 - 15:00</option>
-                                <option value="nutricionista">15:00 - 16:00</option>
-                                <option value="nutricionista">16:00 - 17:00</option>
-                                <option value="nutricionista">17:00 - 18:00</option>
-                            </select>
-
-                            <div class="alert alert-danger alert-dismissible" id="alertaHorario">
-                                <span>O horário deve ser selecionado!</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="form-floating">
-                                <input class="form-control" type="text" id="nome" placeholder=" ">
-                                <label for="nome">Nome</label>
-
-                                <div class="alert alert-danger alert-dismissible" id="alertaNome">
-                                    <span>O nome deve ser preenchido!</span>
+                                <div class="alert alert-danger alert-dismissible" id="alertaEspecialidade">
+                                    <span>A especialidade deve ser selecionada!</span>
                                 </div>
-
                             </div>
-                        </div>
-
-                        <div class="col-sm-4">
-                            <div class="form-floating">
-                                <input class="form-control" type="email" id="email" name="email" placeholder=" ">
-                                <label for="email">E-mail</label>
-                                <div class="alert alert-danger alert-dismissible" id="alertaEmail">
-                                    <span>O e-mail deve ser preenchido!</span>
+                            <div class="col-sm-6">
+                                <select class="form-select" name="nomeMedico" id="nomeMedico">
+                                    <option value="">Médico</option>
+                                    <option value="Fulano">Fulano</option>
+                                    <option value="Ciclano">Ciclano</option>
+                                </select>
+                                <div class="alert alert-danger alert-dismissible" id="alertaNomeMedico">
+                                    <span>O médico deve ser selecionado!</span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-sm-4">
-                            <select name="sexo" id="sexo" class="form-select">
-                                <option value="">Sexo</option>
-                                <option value="Masculino">Masculino</option>
-                                <option value="Feminino">Feminino</option>
-                                <option value="Outro">Outro</option>
-                            </select>
-                            <div class="alert alert-danger alert-dismissible" id="alertaSexo">
-                                <span>O sexo deve ser preenchido!</span>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input type="date" name="data" id="data" class="form-control">
+                                    <label for="data">Data consulta</label>
+                                </div>
+
+                                <div class="alert alert-danger alert-dismissible" id="alertaData">
+                                    <span>A data deve ser selecionada!</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <select class="form-select" name="horario" id="horario">
+                                    <option value="">Horário</option>
+                                    <option value="nutricionista">7:00 - 8:00</option>
+                                    <option value="nutricionista">8:00 - 9:00</option>
+                                    <option value="nutricionista">9:00 - 10:00</option>
+                                    <option value="nutricionista">10:00 - 11:00</option>
+                                    <option value="nutricionista">11:00 - 12:00</option>
+                                    <option value="nutricionista">12:00 - 13:00</option>
+                                    <option value="nutricionista">13:00 - 14:00</option>
+                                    <option value="nutricionista">14:00 - 15:00</option>
+                                    <option value="nutricionista">15:00 - 16:00</option>
+                                    <option value="nutricionista">16:00 - 17:00</option>
+                                    <option value="nutricionista">17:00 - 18:00</option>
+                                </select>
+
+                                <div class="alert alert-danger alert-dismissible" id="alertaHorario">
+                                    <span>O horário deve ser selecionado!</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Dados pessoais</legend>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" type="text" id="nome" placeholder=" ">
+                                    <label for="nome">Nome</label>
+
+                                    <div class="alert alert-danger alert-dismissible" id="alertaNome">
+                                        <span>O nome deve ser preenchido!</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" type="date" id="data-nascimento">
+                                    <label for="data-nascimento">Data de nascimento</label>
+                                    <div class="alert alert-danger alert-dismissible" id="alertaDataNascimento">
+                                        <span>A data de nascimento deve ser preenchida!</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <select name="sexo" id="sexo" class="form-select">
+                                        <option value="">Sexo</option>
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Feminino">Feminino</option>
+                                        <option value="Outro">Outro</option>
+                                    </select>
+                                    <div class="alert alert-danger alert-dismissible" id="alertaSexo">
+                                        <span>O sexo deve ser preenchido!</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Informações de contato</legend>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" type="email" id="email" name="email" placeholder=" ">
+                                    <label for="email">E-mail</label>
+                                    <div class="alert alert-danger alert-dismissible" id="alertaEmail">
+                                        <span>O e-mail deve ser preenchido!</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-floating">
+                                    <input class="form-control" type="tel" id="telefone" name="telefone"
+                                        placeholder=" ">
+                                    <label for="email">Telefone</label>
+                                    <div class="alert alert-danger alert-dismissible" id="alertaTelefone">
+                                        <span>O telefone deve ser preenchido!</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+
                     <button class="btn btn-success col-sm-12" id="botao">Agendar</button>
                 </form>
             </div>
-
         </div>
-
     </main>
 
     <footer>
