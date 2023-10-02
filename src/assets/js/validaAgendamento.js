@@ -8,6 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
         { input: document.getElementById("nome"), alerta: document.getElementById("alertaNome") },
         { input: document.getElementById("email"), alerta: document.getElementById("alertaEmail") },
         { input: document.getElementById("especialidade"), alerta: document.getElementById("alertaEspecialidade") },
+        { input: document.getElementById("data-nascimento"), alerta: document.getElementById("alertaDataNascimento") },
+        { input: document.getElementById("nomeMedico"), alerta: document.getElementById("alertaNomeMedico") },
+        { input: document.getElementById("telefone"), alerta: document.getElementById("alertaTelefone") },
         { input: document.getElementById("data"), alerta: document.getElementById("alertaData") },
         { input: document.getElementById("horario"), alerta: document.getElementById("alertaHorario") },
         { input: document.getElementById("sexo"), alerta: document.getElementById("alertaSexo") }
