@@ -103,15 +103,26 @@ legend {
 
 
 /* agendamento */
+.agendamento-tabela {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(105, 137, 138);
+    margin: 15px auto;
+    border-radius: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
 .agendamento {
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: rgb(105, 137, 138);
+    margin: 15px auto;
     border-radius: 15px;
     padding: 20px;
-    margin-top: 3%;
-    margin-bottom: 3%;
 }
 
 .agendamento input {
@@ -123,13 +134,16 @@ legend {
 }
 
 .agendamento h2,
-.agendamento h3 {
+.agendamento h3,
+.agendamento-tabela h2,
+.agendamento-tabela h3 {
     color: rgb(214, 188, 160);
     font-weight: bolder;
     margin-bottom: 30px;
 }
 
-.agendamento button {
+.agendamento button,
+.agendamento-tabela button {
     margin-top: 5px;
 }
 
