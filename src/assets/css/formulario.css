@@ -91,7 +91,8 @@ legend {
 #alertaEspecialidade,
 #alertaCRP,
 #alertaCRN,
-#alertaCRM {
+#alertaCRM,
+#alertaNomeMedico {
     margin-top: 5px;
     display: none;
     color: red;
