@@ -238,3 +238,36 @@ nav li>a:hover {
     text-decoration: none;
     margin-right: 50px;
 }
+
+.pre-cadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(105, 137, 138);
+    border-radius: 15px;
+    margin: 15px auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.pre-cadastro a {
+    text-decoration: none;
+    color: silver;
+
+}
+
+.pre-cadastro img {
+    width: 230px;
+    height: 230px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 5px;
+    margin-top: 25px;
+}
+
+.pre-cadastro h2 {
+    color: rgb(214, 188, 160);
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
