@@ -31,11 +31,14 @@ Saúde de Qualidade (ODS 3): Esta meta está diretamente relacionada à prestaç
 ## Principais tópicos
 
 - Funcionalidades:
-  - Cadastro de clientes
+  - Cadastro de clientes;
+  - Cadastro de funcionários;
   - Agendar consulta;
-  - Cancelar Consulta;
   - Re-agendar consulta;
+  - Cancelar Consulta;
+  - Agenda paciente/funcionário;
   - Listar consultas agendadas;
+  - Listar pacientes cadastrados;
   - Edição de perfil
   - Chatbot.
   
