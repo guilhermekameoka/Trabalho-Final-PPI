@@ -84,14 +84,10 @@ legend {
 #alertaBairro,
 #alertaCidade,
 #alertaEstado,
-#alertaEspecialidade,
 #alertaData,
 #alertaHorario,
-#alertaSenha,
 #alertaEspecialidade,
-#alertaCRP,
-#alertaCRN,
-#alertaCRM,
+#alertaRegpro,
 #alertaNomeFuncionario,
 #alertaConvenio {
     margin-top: 5px;
