@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/formulario.css">
+    <link rel="stylesheet" href="../../../assets/css/media.css">
+    <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
+    <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+    <title>Sua agenda</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-xl navbar-dark fixed-top" id="navbar">
+            <a class="navbar-brand" href="./home.html">
+                <div class="d-flex align-items-center">
+                    <img src="../../../assets/images/logo.jpg" class="logo" alt="Logomarca CiniSimples">
+                    <h1 id="CliniSimples" class="ml-2">CliniSimples</h1>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link color-white" href="./homeFuncionario.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link color-white" href="./perfilFuncionario.html">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-white" href="./agendaFuncionario.html">Agenda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-white" href="./pacientes.html">Pacientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-white" href="../../../../index.html">Sair</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="agendamento-tabela">
+            <div class="container">
+                <h2>Agenda</h2>
+                <form>
+                    <div class="row">
+                        <div class="col-sm-12 d-flex">
+                            <div class="form-floating flex-grow-1" id="pesquisa">
+                                <input class="form-control" type="text" id="nome" placeholder=" ">
+                                <label for="nome">Pesquisar...</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-success col-sm-2" id="botao-pesquisa">Buscar</button>
+                        </div>
+                    </div>
+                </form>
+
+
+                <table class="table table-striped table-sm text-center">
+                    <thead>
+                        <tr class="text-center table-success">
+                            <th>Data</th>
+                            <th>Hora</th>
+                            <th>Paciente</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>28/09/2023</td>
+                            <td>14:00</td>
+                            <td>Fulano</td>
+                            <td>
+                                <div class="d-block">
+                                    <button class="btn btn-primary btn-sm">Remarcar</button>
+                                </div>
+                                <div class="d-block">
+                                    <button class="btn btn-danger btn-sm">Cancelar</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>01/10/2023</td>
+                            <td>16:00</td>
+                            <td>Ciclano</td>
+                            <td>
+                                <div class="d-block">
+                                    <button class="btn btn-primary btn-sm">Remarcar</button>
+                                </div>
+                                <div class="d-block">
+                                    <button class="btn btn-danger btn-sm">Cancelar</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>04/10/2023</td>
+                            <td>9:00</td>
+                            <td>Fulano</td>
+                            <td>
+                                <div class="d-block">
+                                    <button class="btn btn-primary btn-sm">Remarcar</button>
+                                </div>
+                                <div class="d-block">
+                                    <button class="btn btn-danger btn-sm">Cancelar</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>13/10/2023</td>
+                            <td>8:00</td>
+                            <td>Ciclano</td>
+                            <td>
+                                <div class="d-block">
+                                    <button class="btn btn-primary btn-sm">Remarcar</button>
+                                </div>
+                                <div class="d-block">
+                                    <button class="btn btn-danger btn-sm">Cancelar</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>CliniSimples - Trabalho final PPI</p>
+    </footer>
+
+</body>
+
+</html>
