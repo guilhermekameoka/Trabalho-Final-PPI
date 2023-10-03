@@ -16,9 +16,9 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-xl navbar-dark fixed-top" id="navbar">
-            <a class="navbar-brand" href="../home.html">
+            <a class="navbar-brand" href="./home.html">
                 <div class="d-flex align-items-center">
-                    <img src="../../../../assets/images/logo.jpg" class="logo" alt="Logomarca CiniSimples">
+                    <img src="../../../assets/images/logo.jpg" class="logo" alt="Logomarca CiniSimples">
                     <h1 id="CliniSimples" class="ml-2">CliniSimples</h1>
                 </div>
             </a>
@@ -113,6 +113,19 @@
 
                                 <div class="alert alert-danger alert-dismissible" id="alertaHorario">
                                     <span>O horário deve ser selecionado!</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <select class="form-select" name="convenio" id="convenio">
+                                        <option value="">Convênio</option>
+                                        <option value="Nenhum">Sem Convênio</option>
+                                        <option value="Unimed">Unimed</option>
+                                        <option value="SF">São Francisco</option>
+                                    </select>
+                                    <div class="alert alert-danger alert-dismissible" id="alertaConvenio">
+                                        <span>O convênio deve ser selecionado!</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
