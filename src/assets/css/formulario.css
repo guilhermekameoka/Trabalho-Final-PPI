@@ -92,7 +92,8 @@ legend {
 #alertaCRP,
 #alertaCRN,
 #alertaCRM,
-#alertaNomeFuncionario {
+#alertaNomeFuncionario,
+#alertaConvenio {
     margin-top: 5px;
     display: none;
     color: red;
@@ -145,6 +146,7 @@ legend {
 .agendamento button,
 .agendamento-tabela button {
     margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 /* ################### */

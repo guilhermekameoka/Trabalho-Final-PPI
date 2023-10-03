@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { input: document.getElementById("telefone"), alerta: document.getElementById("alertaTelefone") },
         { input: document.getElementById("data"), alerta: document.getElementById("alertaData") },
         { input: document.getElementById("horario"), alerta: document.getElementById("alertaHorario") },
+        { input: document.getElementById("convenio"), alerta: document.getElementById("alertaConvenio") },
         { input: document.getElementById("sexo"), alerta: document.getElementById("alertaSexo") }
     ];
 
