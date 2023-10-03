@@ -12,7 +12,7 @@
     <script src="../../../assets/js/conselhoRegional.js"></script>
     <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
 
-    <title>Cadastro</title>
+    <title>Cadastro funcionário</title>
 </head>
 
 <body>
@@ -53,14 +53,14 @@
         <form>
             <div class="cadastro">
                 <div class="container">
-                    <h3>Cadastro</h3>
+                    <h3>Cadastro funcionário</h3>
 
                     <fieldset>
                         <legend>Dados pessoais</legend>
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input class="form-control" type="text" id="nome" placeholder=" " autofocus>
+                                    <input class="form-control" type="text" id="nome" name="nome" placeholder=" " autofocus>
                                     <label for="nome">Nome</label>
                                     <div class="alert alert-danger alert-dismissible" id="alertaNome">
                                         <span>O nome deve ser preenchido!</span>
@@ -69,7 +69,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input class="form-control" type="text" id="cpf" placeholder=" ">
+                                    <input class="form-control" type="text" id="cpf" name="cpf" placeholder=" ">
                                     <label for="cpf">CPF</label>
                                     <div class="alert alert-danger alert-dismissible" id="alertaCpf">
                                         <span>O CPF deve ser preenchido!</span>
@@ -81,7 +81,7 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input class="form-control" type="date" id="data-nascimento">
+                                    <input class="form-control" type="date" id="data-nascimento" name="data-nascimento">
                                     <label for="data-nascimento">Data de nascimento</label>
                                     <div class="alert alert-danger alert-dismissible" id="alertaDataNascimento">
                                         <span>A data de nascimento deve ser preenchida!</span>
@@ -139,30 +139,12 @@
                                     <span>A especialidade deve ser preenchida!</span>
                                 </div>
                             </div>
-                            <div class="col-sm-6" id="crp">
+                            <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input class="form-control" type="text" id="CRP" name="crp" placeholder=" ">
-                                    <label for="rua">CRP</label>
-                                    <div class="alert alert-danger alert-dismissible" id="alertaCRP">
-                                        <span>O CRP deve ser preenchido!</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6" id="crn">
-                                <div class="form-floating">
-                                    <input class="form-control" type="text" id="CRN" name="crn" placeholder=" ">
-                                    <label for="rua">CRN</label>
-                                    <div class="alert alert-danger alert-dismissible" id="alertaCRN">
-                                        <span>O CRN deve ser preenchido!</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6" id="crm">
-                                <div class="form-floating">
-                                    <input class="form-control" type="text" id="CRM" name="crm" placeholder=" ">
-                                    <label for="rua">CRM</label>
-                                    <div class="alert alert-danger alert-dismissible" id="alertaCRM">
-                                        <span>O CRM deve ser preenchido!</span>
+                                    <input class="form-control" type="text" id="regpro" name="regpro" placeholder=" ">
+                                    <label for="regpro">Registro profissional</label>
+                                    <div class="alert alert-danger alert-dismissible" id="alertaRegpro">
+                                        <span>O registro profissional dever ser preenchido!</span>
                                     </div>
                                 </div>
                             </div>

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
     <script type="module" src="../../../assets/js/validaCadastroPaciente.js"></script>
     <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
-    <title>Cadastro</title>
+    <title>Cadastro paciente</title>
 </head>
 
 <body>
@@ -51,14 +51,15 @@
         <form>
             <div class="cadastro">
                 <div class="container">
-                    <h3>Cadastro</h3>
+                    <h3>Cadastro paciente</h3>
 
                     <fieldset>
                         <legend>Dados pessoais</legend>
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input class="form-control" type="text" id="nome" placeholder=" " autofocus>
+                                    <input class="form-control" type="text" id="nome" name="nome" placeholder=" "
+                                        autofocus>
                                     <label for="nome">Nome</label>
                                     <div class="alert alert-danger alert-dismissible" id="alertaNome">
                                         <span>O nome deve ser preenchido!</span>
@@ -67,7 +68,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input class="form-control" type="text" id="cpf" placeholder=" ">
+                                    <input class="form-control" type="text" id="cpf" name="cpf" placeholder=" ">
                                     <label for="cpf">CPF</label>
                                     <div class="alert alert-danger alert-dismissible" id="alertaCpf">
                                         <span>O CPF deve ser preenchido!</span>
@@ -79,7 +80,7 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input class="form-control" type="date" id="data-nascimento">
+                                    <input class="form-control" type="date" id="data-nascimento" name="data-nascimento">
                                     <label for="data-nascimento">Data de nascimento</label>
                                     <div class="alert alert-danger alert-dismissible" id="alertaDataNascimento">
                                         <span>A data de nascimento deve ser preenchida!</span>
@@ -129,9 +130,8 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input class="form-control" type="text" id="telefone" name="telefone"
-                                        placeholder=" ">
-                                    <label for="rua">Telefone</label>
+                                    <input class="form-control" type="text" id="telefone" name="telefone" placeholder=" ">
+                                    <label for="telefone">Telefone</label>
                                     <div class="alert alert-danger alert-dismissible" id="alertaTelefone">
                                         <span>O telefone deve ser preenchido!</span>
                                     </div>
