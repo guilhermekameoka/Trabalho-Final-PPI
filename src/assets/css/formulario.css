@@ -45,6 +45,8 @@ legend {
 
 /* ##################### */
 
+
+
 /* login */
 .paginaLogin {
     margin: auto 10px;
@@ -68,6 +70,10 @@ legend {
     color: lightgrey;
     margin-left: 10px;
 }
+
+/* ##################### */
+
+
 
 /* alertas */
 #alertaEmail,
@@ -96,7 +102,7 @@ legend {
 
 
 
-/* agendamento */
+/* agenda/agendamento */
 .agendamento {
     background-color: rgb(105, 137, 138);
     margin: 15px auto;
