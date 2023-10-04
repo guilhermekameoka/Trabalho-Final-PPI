@@ -159,6 +159,7 @@ nav li>a:hover {
 .boas-vindas {
     align-items: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
     margin: 15px auto;
@@ -188,7 +189,7 @@ nav li>a:hover {
 .boas-vindas a {
     text-decoration: none;
     color: silver;
-    margin: 20px;
+
 }
 
 /* sobre */
