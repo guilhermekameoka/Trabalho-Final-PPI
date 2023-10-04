@@ -1,71 +1,4 @@
 /* media queries */
-/* altura */
-
-/* @media screen and (max-height: 1400px) {
-    main {
-        margin-top: 98px;
-        margin-bottom: 30px;
-    }
-
-}
-
-@media screen and (max-height: 1240px) {
-    main {
-        margin-top: 180px;
-    }
-
-}
-
-@media screen and (max-height: 915px) {
-
-
-    footer {
-        margin-top: 0px;
-    }
-
-}
-
-@media screen and (max-height: 896px) {
-
-    footer {
-        margin-top: 0px;
-    }
-
-}
-
-@media screen and (max-height: 844px) {
-
-    footer {
-        margin-top: 0px;
-    }
-
-}
-
-@media screen and (max-height: 720px) {
-
-    footer {
-        margin-top: 0px;
-    }
-
-}
-
-@media screen and (max-height: 667px) {
-
-
-    footer {
-        margin-top: 0px;
-    }
-
-} */
-
-
-
-
-
-
-
-
-/* largura */
 @media (max-width: 768px) {
 
     .table th,
@@ -74,7 +7,6 @@
         font-size: 14px;
     }
 }
-
 
 @media screen and (max-width: 578px) {
     #CliniSimples {
@@ -92,7 +24,6 @@
         font-size: 12px;
     }
 }
-
 
 @media screen and (max-width: 414px) {
 
