@@ -47,9 +47,6 @@ legend {
 
 /* login */
 .paginaLogin {
-    display: flex;
-    flex-direction: column;
-    flex: 0 auto;
     margin: auto 10px;
     border-radius: 15px;
     padding: 20px;
@@ -100,24 +97,11 @@ legend {
 
 
 /* agendamento */
-.agendamento-tabela {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: rgb(105, 137, 138);
-    margin: 15px auto;
-    padding: 15px;
-    border-radius: 15px;
-}
-
 .agendamento {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     background-color: rgb(105, 137, 138);
     margin: 15px auto;
     border-radius: 15px;
-    padding: 20px;
+    padding: 15px;
 }
 
 .agendamento input {
@@ -129,16 +113,13 @@ legend {
 }
 
 .agendamento h2,
-.agendamento h3,
-.agendamento-tabela h2,
-.agendamento-tabela h3 {
+.agendamento h3 {
     color: rgb(214, 188, 160);
     font-weight: bolder;
     margin-bottom: 30px;
 }
 
-.agendamento button,
-.agendamento-tabela button {
+.agendamento button {
     margin-top: 5px;
     margin-bottom: 5px;
 }
