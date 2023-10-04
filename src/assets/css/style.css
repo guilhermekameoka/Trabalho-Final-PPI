@@ -129,10 +129,6 @@ nav li>a:hover {
 
 /* home page */
 #homePage {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin: 10px;
     color: silver;
     padding: 40px;
