@@ -106,10 +106,8 @@ legend {
     justify-content: center;
     background-color: rgb(105, 137, 138);
     margin: 15px auto;
+    padding: 15px;
     border-radius: 15px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-
 }
 
 .agendamento {
