@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { input: document.getElementById("cpf"), alerta: document.getElementById("alertaCpf") },
         { input: document.getElementById("data-nascimento"), alerta: document.getElementById("alertaDataNascimento") },
         { input: document.getElementById("sexo"), alerta: document.getElementById("alertaSexo") },
+        { input: document.getElementById("sexo"), alerta: document.getElementById("alertaCep") },
         { input: document.getElementById("rua"), alerta: document.getElementById("alertaRua") },
         { input: document.getElementById("bairro"), alerta: document.getElementById("alertaBairro") },
         { input: document.getElementById("cidade"), alerta: document.getElementById("alertaCidade") },

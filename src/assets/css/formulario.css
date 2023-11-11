@@ -92,7 +92,8 @@ legend {
 #alertaEspecialidade,
 #alertaRegpro,
 #alertaNomeProfissional,
-#alertaConvenio {
+#alertaConveni,
+#alertaCep {
     margin-top: 5px;
     display: none;
     color: red;
