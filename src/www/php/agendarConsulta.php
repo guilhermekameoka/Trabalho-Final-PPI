@@ -13,18 +13,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telefone = $_POST["telefone"] ?? "";
 
     $especialidade = $_POST["especialidade"] ?? "";
-    $profissional = $_POST["profissional"] ?? "";
-    $data_consulta = $_POST["data_consulta"] ?? "";
-    $horario = $_POST["horario_consulta"] ?? "";
+    $profissional = $_POST["nomeProfissional"] ?? "";
+    $data_consulta = $_POST["data"] ?? "";
+    $horario = $_POST["horario"] ?? "";
     $convenio = $_POST["convenio"] ?? "";
 
-    // Iniciar a transação
-    $pdo->beginTransaction();
-
+    
     try {
+        // Iniciar a transação
+        $pdo->beginTransaction();
+
         // Insere dados na tabela consulta
         $consulta = <<<SQL
-        INSERT INTO consulta (especialidade, profissional, data_consulta, horario_consulta, convenio, nome_paciente, data_nascimento, sexo, email, telefone)
+        INSERT INTO consulta (especialidade, nome_profissional, data_consulta, horario_consulta, convenio, nome_paciente, data_nascimento, sexo, email, telefone)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         SQL;
 
@@ -35,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Insere dados na tabela agenda_funcionario
         $agenda_funcionario = <<<SQL
-        INSERT INTO agenda_funcionario (nome, sexo, data_consulta, hora_consulta)
+        INSERT INTO agenda_funcionario (nome_paciente, sexo, data_consulta, hora_consulta)
         VALUES (?, ?, ?, ?)
         SQL;
 
@@ -46,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Insere dados na tabela agenda_paciente
         $agenda_paciente = <<<SQL
-        INSERT INTO agenda_paciente (data_consulta, hora_consulta, profissional, especialidade)
+        INSERT INTO agenda_paciente (data_consulta, hora_consulta, nome_profissional, especialidade)
         VALUES (?, ?, ?, ?)
         SQL;
 
