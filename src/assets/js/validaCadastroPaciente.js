@@ -1,6 +1,8 @@
 import { validaInput } from "./validaInput.js";
 import { checaValorInput } from "./checaValorInput.js";
 
+console.log("teste");
+
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("form");
 
@@ -12,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { input: document.getElementById("cpf"), alerta: document.getElementById("alertaCpf") },
         { input: document.getElementById("data-nascimento"), alerta: document.getElementById("alertaDataNascimento") },
         { input: document.getElementById("sexo"), alerta: document.getElementById("alertaSexo") },
-        { input: document.getElementById("sexo"), alerta: document.getElementById("alertaCep") },
+        { input: document.getElementById("cep"), alerta: document.getElementById("alertaCep") },
         { input: document.getElementById("rua"), alerta: document.getElementById("alertaRua") },
         { input: document.getElementById("bairro"), alerta: document.getElementById("alertaBairro") },
         { input: document.getElementById("cidade"), alerta: document.getElementById("alertaCidade") },
@@ -21,10 +23,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     form.addEventListener("submit", function (event) {
         event.preventDefault();
-
+    
+        let formValido = true;
+    
         campos.forEach(({ input, alerta }) => {
-            validaInput(input, alerta);
+            if (!validaInput(input, alerta, mensagensErro[input.id])) {
+                formValido = false;
+            }
         });
+    
+        if (formValido) {
+            form.submit();
+        }
     });
 
     campos.forEach(({ input, alerta }) => {
