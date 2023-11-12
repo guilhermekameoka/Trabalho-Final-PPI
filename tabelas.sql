@@ -17,7 +17,7 @@ CREATE TABLE paciente (
 
 CREATE TABLE funcionario (
     `id` INT NOT NULL AUTO_INCREMENT,
-    `nome` VARCHAR(255) NOT NULL,
+    `nome_paciente` VARCHAR(255) NOT NULL,
     `cpf` VARCHAR(14) NOT NULL,
     `data_nascimento` DATE NOT NULL,
     `sexo` VARCHAR(9) NOT NULL,
@@ -50,7 +50,7 @@ CREATE TABLE consulta (
 CREATE TABLE agenda_funcionario (
     `data_consulta` DATE NOT NULL,
     `hora_consulta` VARCHAR(10) NOT NULL,
-    `paciente` VARCHAR(50) NOT NULL,
+    `nome_paciente` VARCHAR(50) NOT NULL,
     `sexo` VARCHAR(10) NOT NULL
 ) ENGINE = InnoDB;
 
