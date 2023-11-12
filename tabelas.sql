@@ -33,3 +33,16 @@ CREATE TABLE funcionario (
     `estado` VARCHAR(2) NOT NULL,
     PRIMARY KEY (`id`)
 ) ENGINE = InnoDB;
+
+CREATE TABLE consulta (
+    `especialidade` VARCHAR(25) NOT NULL,
+    `profissional` VARCHAR(50) NOT NULL,
+    `data_consulta` DATE NOT NULL,
+    `horario` VARCHAR(15) NOT NULL,
+    `convenio` VARCHAR(20) NOT NULL,
+    `nome_paciente` VARCHAR(50) NOT NULL,
+    `data_nascimento` DATE NOT NULL,
+    `sexo` VARCHAR(10) NOT NULL,
+    `email` VARCHAR(100) NOT NULL,
+    `telefone` INT(14) NOT NULL
+) ENGINE = InnoDB;
