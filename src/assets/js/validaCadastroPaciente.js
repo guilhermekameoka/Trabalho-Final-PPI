@@ -1,8 +1,6 @@
 import { validaInput } from "./validaInput.js";
 import { checaValorInput } from "./checaValorInput.js";
 
-console.log("teste");
-
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("form");
 
@@ -23,17 +21,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     form.addEventListener("submit", function (event) {
         event.preventDefault();
-    
+
         let formValido = true;
-    
+
         campos.forEach(({ input, alerta }) => {
-            if (!validaInput(input, alerta, mensagensErro[input.id])) {
+            if (!validaInput(input, alerta)) {
                 formValido = false;
             }
         });
-    
+
         if (formValido) {
             form.submit();
+        } else {
+            console.log("Formulário inválido. Preencha os campos destacados.");
         }
     });
 
