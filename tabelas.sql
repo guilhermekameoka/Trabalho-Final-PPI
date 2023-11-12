@@ -46,3 +46,10 @@ CREATE TABLE consulta (
     `email` VARCHAR(100) NOT NULL,
     `telefone` INT(14) NOT NULL
 ) ENGINE = InnoDB;
+
+CREATE TABLE agenda_funcionario (
+    `data` DATE NOT NULL,
+    `hora` VARCHAR(10) NOT NULL,
+    `paciente` VARCHAR(50) NOT NULL,
+    `sexo` VARCHAR(10) NOT NULL
+) ENGINE = InnoDB;
