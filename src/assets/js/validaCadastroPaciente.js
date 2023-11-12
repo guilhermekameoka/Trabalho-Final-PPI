@@ -20,20 +20,19 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     form.addEventListener("submit", function (event) {
-        event.preventDefault();
-
         let formValido = true;
 
         campos.forEach(({ input, alerta }) => {
             if (!validaInput(input, alerta)) {
+                event.preventDefault();
                 formValido = false;
+                console.log("form invalido");
             }
         });
 
         if (formValido) {
             form.submit();
-        } else {
-            console.log("Formulário inválido. Preencha os campos destacados.");
+            console.log("deu certo");
         }
     });
 
