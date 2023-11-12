@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $stmt_agenda_paciente = $pdo->prepare($agenda_paciente);
         $stmt_agenda_paciente->execute([$data_consulta, $horario, $profissional, $especialidade]);
-        
+
         if ($stmt_agenda_paciente->rowCount() <= 0) {
             throw new Exception('Falha na inserção na tabela agenda_paciente');
         }
@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $pdo->commit();
 
         // Redireciona para a homepage
-        // header("location: ../templates/private/funcionario/homeFuncionario.php");
+        header("location: ../templates/private/paciente/home.php");
 
         exit();
     } catch (Exception $e) {
