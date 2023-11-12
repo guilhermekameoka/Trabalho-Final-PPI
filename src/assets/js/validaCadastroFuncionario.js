@@ -22,11 +22,18 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     form.addEventListener("submit", function (event) {
-        event.preventDefault();
+        let formValido = true;
 
         campos.forEach(({ input, alerta }) => {
-            validaInput(input, alerta);
+            if (!validaInput(input, alerta)) {
+                event.preventDefault();
+                formValido = false;
+            }
         });
+
+        if (formValido) {
+            form.submit();
+        }
     });
 
     campos.forEach(({ input, alerta }) => {

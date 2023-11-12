@@ -26,13 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
             if (!validaInput(input, alerta)) {
                 event.preventDefault();
                 formValido = false;
-                console.log("form invalido");
             }
         });
 
         if (formValido) {
             form.submit();
-            console.log("deu certo");
         }
     });
 
