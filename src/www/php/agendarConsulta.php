@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telefone = $_POST["telefone"] ?? "";
 
     $especialidade = $_POST["especialidade"] ?? "";
-    $profissional = $POST["profissional"] ?? "";
+    $profissional = $_POST["profissional"] ?? "";
     $data_consulta = $_POST["data_consulta"] ?? "";
     $horario = $_POST["horario"] ?? "";
     $convenio = $_POST["convenio"] ?? "";
@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pdo->beginTransaction();
 
     try {
-        // Inserir na tabela agenda_funcionario
+        // Insere dados na tabela agenda_funcionario
         $agenda_funcionario = <<<SQL
         INSERT INTO agenda_funcionario (nome, sexo, data_consulta, hora_consulta)
         VALUES (?, ?, ?, ?)
@@ -33,11 +33,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             throw new Exception('Falha na inserção na tabela agenda_funcionário');
         }
 
-        // implementar a insercao na tabela consulta
+        // Insere dados na tabela consulta
+        $consulta = <<<SQL
+        INSERT INTO consulta (especialidade, profissional, data_consulta, horario, convenio, nome_paciente, data_nascimento, sexo, email, telefone)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        SQL;
+
+        $stmt_consulta = $pdo->prepare($consulta);
+        if (!$stmt_consulta->execute([$especialidade, $profissional, $data_consulta, $horario, $convenio, $nome, $dataNascimento, $sexo, $email, $telefone])) {
+            throw new Exception('Falha na inserção na tabela consulta');
+        }
 
 
-        // implementar insercao agenda_paciente
+        // Insere dados na tabela agenda_paciente
+        $agenda_paciente = <<<SQL
+        INSERT INTO agenda_paciente (data_consulta, hora_consulta, profissional, especialidade)
+        VALUES (?, ?, ?, ?)
+        SQL;
 
+        $stmt_agenda_paciente = $pdo->prepare($agenda_paciente);
+        if (!$stmt_agenda_paciente->execute([$data_consulta, $horario, $profissional, $especialidade])) {
+            throw new Exception('Falha na inserção na tabela agenda_paciente');
+        }
 
         // Commit da transação
         $pdo->commit();
@@ -45,11 +62,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Redireciona para a homepage
         // header("location: ../templates/private/funcionario/homeFuncionario.php");
         exit();
-
+        
     } catch (Exception $e) {
         // Rollback em caso de falha
         $pdo->rollback();
         exit('Falha ao cadastrar os dados: ' . $e->getMessage());
     }
 }
-?>
