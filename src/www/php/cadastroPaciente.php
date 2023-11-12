@@ -36,8 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             throw new Exception('Falha na inserção de funcionário');
         }
 
-        // Redireciona para a homepage
-        // header("location: ../templates/private/funcionario/homePaciente.php");
+        // Redireciona para a página inicial
+        header("location: ../../../index.html");
         
         exit();
     } catch (Exception $e) {
