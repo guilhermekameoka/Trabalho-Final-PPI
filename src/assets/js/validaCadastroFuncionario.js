@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { input: document.getElementById("regpro"), alerta: document.getElementById("alertaRegpro") },
         { input: document.getElementById("senha"), alerta: document.getElementById("alertaSenha") },
         { input: document.getElementById("telefone"), alerta: document.getElementById("alertaTelefone") },
-        { input: document.getElementById("sexo"), alerta: document.getElementById("alertaCep") },
+        { input: document.getElementById("cep"), alerta: document.getElementById("alertaCep") },
         { input: document.getElementById("rua"), alerta: document.getElementById("alertaRua") },
         { input: document.getElementById("bairro"), alerta: document.getElementById("alertaBairro") },
         { input: document.getElementById("cidade"), alerta: document.getElementById("alertaCidade") },
