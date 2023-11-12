@@ -48,8 +48,8 @@ CREATE TABLE consulta (
 ) ENGINE = InnoDB;
 
 CREATE TABLE agenda_funcionario (
-    `data` DATE NOT NULL,
-    `hora` VARCHAR(10) NOT NULL,
+    `data_consulta` DATE NOT NULL,
+    `hora_consulta` VARCHAR(10) NOT NULL,
     `paciente` VARCHAR(50) NOT NULL,
     `sexo` VARCHAR(10) NOT NULL
 ) ENGINE = InnoDB;
