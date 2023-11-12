@@ -20,7 +20,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Verifica se a senha corresponde com a senha hash
             if (password_verify($senha, $dados_paciente['senha'])) {
-                //    header("location: ../templates/private/paciente/homePaciente.php");
+                session_start();
+                $_SESSION["login"] = "1";
+                $_SESSION["nome"] = $row['nome'];
+                header("location: ../templates/private/paciente/home.php");
                 exit();
             }
         }
@@ -35,7 +38,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Verifica se a senha corresponde com a senha hash
             if (password_verify($senha, $dados_funcionario['senha'])) {
-                //    header("location: ../templates/private/funcionario/homeFuncionario.php");
+                session_start();
+                $_SESSION["login"] = "1";
+                $_SESSION["nome"] = $row['nome'];
+                header("location: ../templates/private/funcionario/homeFuncionario.php");
                 exit();
             }
         }
