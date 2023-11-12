@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $especialidade = $_POST["especialidade"] ?? "";
     $profissional = $_POST["profissional"] ?? "";
     $data_consulta = $_POST["data_consulta"] ?? "";
-    $horario = $_POST["horario"] ?? "";
+    $horario = $_POST["horario_consulta"] ?? "";
     $convenio = $_POST["convenio"] ?? "";
 
     // Iniciar a transação
@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // Insere dados na tabela consulta
         $consulta = <<<SQL
-        INSERT INTO consulta (especialidade, profissional, data_consulta, horario, convenio, nome_paciente, data_nascimento, sexo, email, telefone)
+        INSERT INTO consulta (especialidade, profissional, data_consulta, horario_consulta, convenio, nome_paciente, data_nascimento, sexo, email, telefone)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         SQL;
 
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         SQL;
 
         $stmt_agenda_funcionario = $pdo->prepare($agenda_funcionario);
-        if (!$stmt_agenda_funcionario->execute([$nome, $sexo, $data_consulta, $hora_consulta])) {
+        if (!$stmt_agenda_funcionario->execute([$nome, $sexo, $data_consulta, $horario])) {
             throw new Exception('Falha na inserção na tabela agenda_funcionário');
         }
 

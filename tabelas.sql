@@ -38,7 +38,7 @@ CREATE TABLE consulta (
     `especialidade` VARCHAR(25) NOT NULL,
     `profissional` VARCHAR(50) NOT NULL,
     `data_consulta` DATE NOT NULL,
-    `horario` VARCHAR(15) NOT NULL,
+    `horario_consulta` VARCHAR(15) NOT NULL,
     `convenio` VARCHAR(20) NOT NULL,
     `nome_paciente` VARCHAR(50) NOT NULL,
     `data_nascimento` DATE NOT NULL,
