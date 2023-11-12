@@ -10,24 +10,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         $pdo->beginTransaction();
 
-        // Verifica se é um paciente
+        // Verifica se é paciente
         $consulta_paciente = "SELECT * FROM paciente WHERE email = ?";
         $stmt_paciente = $pdo->prepare($consulta_paciente);
         $stmt_paciente->execute([$email]);
 
         if ($stmt_paciente->rowCount() > 0) {
             $dados_paciente = $stmt_paciente->fetch(PDO::FETCH_ASSOC);
-            
-            // Verifica a correspondência da senha hash
+
+            // Verifica se a senha corresponde com a senha hash
             if (password_verify($senha, $dados_paciente['senha'])) {
-                // Paciente autenticado com sucesso
-                // Redirecionar para a homepage do paciente
-                header("location: ../templates/private/paciente/homePaciente.php");
+                //    header("location: ../templates/private/paciente/homePaciente.php");
                 exit();
             }
         }
 
-        // Verifica se é um funcionário
+        // Verifica se é funcionário
         $consulta_funcionario = "SELECT * FROM funcionario WHERE email = ?";
         $stmt_funcionario = $pdo->prepare($consulta_funcionario);
         $stmt_funcionario->execute([$email]);
@@ -35,11 +33,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($stmt_funcionario->rowCount() > 0) {
             $dados_funcionario = $stmt_funcionario->fetch(PDO::FETCH_ASSOC);
 
-            // Verifica a correspondência da senha hash
+            // Verifica se a senha corresponde com a senha hash
             if (password_verify($senha, $dados_funcionario['senha'])) {
-                // Funcionário autenticado com sucesso
-                // Redirecionar para a homepage do funcionário
-                header("location: ../templates/private/funcionario/homeFuncionario.php");
+                //    header("location: ../templates/private/funcionario/homeFuncionario.php");
                 exit();
             }
         }
