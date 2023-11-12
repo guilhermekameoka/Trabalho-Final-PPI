@@ -13,46 +13,45 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telefone = $_POST["telefone"] ?? "";
 
     $especialidade = $_POST["especialidade"] ?? "";
-    $profissional = $_POST["nomeProfissional"] ?? "";
-    $data_consulta = $_POST["data"] ?? "";
-    $horario = $_POST["horario"] ?? "";
+    $profissional = $_POST["profissional"] ?? "";
+    $data_consulta = $_POST["data_consulta"] ?? "";
+    $horario = $_POST["horario_consulta"] ?? "";
     $convenio = $_POST["convenio"] ?? "";
 
-    
     try {
         // Iniciar a transação
         $pdo->beginTransaction();
 
         // Insere dados na tabela consulta
-        $consulta = <<<SQL
-        INSERT INTO consulta (especialidade, nome_profissional, data_consulta, horario_consulta, convenio, nome_paciente, data_nascimento, sexo, email, telefone)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        SQL;
+        $consulta = "INSERT INTO consulta (especialidade, profissional, data_consulta, horario_consulta, convenio, nome_paciente, data_nascimento, sexo, email, telefone)
+                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         $stmt_consulta = $pdo->prepare($consulta);
-        if (!$stmt_consulta->execute([$especialidade, $profissional, $data_consulta, $horario, $convenio, $nome, $dataNascimento, $sexo, $email, $telefone])) {
+        $stmt_consulta->execute([$especialidade, $profissional, $data_consulta, $horario, $convenio, $nome, $dataNascimento, $sexo, $email, $telefone]);
+
+        if ($stmt_consulta->rowCount() <= 0) {
             throw new Exception('Falha na inserção na tabela consulta');
         }
 
         // Insere dados na tabela agenda_funcionario
-        $agenda_funcionario = <<<SQL
-        INSERT INTO agenda_funcionario (nome_paciente, sexo, data_consulta, hora_consulta)
-        VALUES (?, ?, ?, ?)
-        SQL;
+        $agenda_funcionario = "INSERT INTO agenda_funcionario (nome_paciente, sexo, data_consulta, hora_consulta)
+                              VALUES (?, ?, ?, ?)";
 
         $stmt_agenda_funcionario = $pdo->prepare($agenda_funcionario);
-        if (!$stmt_agenda_funcionario->execute([$nome, $sexo, $data_consulta, $horario])) {
+        $stmt_agenda_funcionario->execute([$nome, $sexo, $data_consulta, $horario]);
+
+        if ($stmt_agenda_funcionario->rowCount() <= 0) {
             throw new Exception('Falha na inserção na tabela agenda_funcionário');
         }
 
         // Insere dados na tabela agenda_paciente
-        $agenda_paciente = <<<SQL
-        INSERT INTO agenda_paciente (data_consulta, hora_consulta, nome_profissional, especialidade)
-        VALUES (?, ?, ?, ?)
-        SQL;
+        $agenda_paciente = "INSERT INTO agenda_paciente (data_consulta, hora_consulta, profissional, especialidade)
+                            VALUES (?, ?, ?, ?)";
 
         $stmt_agenda_paciente = $pdo->prepare($agenda_paciente);
-        if (!$stmt_agenda_paciente->execute([$data_consulta, $horario, $profissional, $especialidade])) {
+        $stmt_agenda_paciente->execute([$data_consulta, $horario, $profissional, $especialidade]);
+        
+        if ($stmt_agenda_paciente->rowCount() <= 0) {
             throw new Exception('Falha na inserção na tabela agenda_paciente');
         }
 
@@ -61,8 +60,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Redireciona para a homepage
         // header("location: ../templates/private/funcionario/homeFuncionario.php");
-        exit();
 
+        exit();
     } catch (Exception $e) {
         // Rollback em caso de falha
         $pdo->rollback();
