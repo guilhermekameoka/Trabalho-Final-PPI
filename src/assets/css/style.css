@@ -48,6 +48,16 @@ footer {
     margin-top: 5px;
 }
 
+/* header */
+#logo{
+    height: 7.692vh;
+    width: auto;
+}
+
+#logo-text{
+    font-size: 28px;
+}
+
 /* navegacao */
 nav {
     background-color: rgb(43, 100, 102);
@@ -55,6 +65,8 @@ nav {
     align-items: center;
     width: 100%;
     font-size: 1.25rem;
+
+    max-height: 10vh;
 }
 
 
@@ -76,6 +88,14 @@ nav li>a:hover {
     margin-left: 2%;
 }
 
+/* Alinhamento da logo */
+#logo-items-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    flex-direction: row;
+}
 
 #botao-pesquisa {
     width: 100%;
@@ -221,13 +241,18 @@ nav li>a:hover {
 
 /* nome logomarca */
 #CliniSimples {
-    margin-left: 10px;
-    font-size: 2.5rem;
+
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: baseline; */
+    /* margin-right: 2.0rem; */
+    /* margin-left: 1rem; */
+
+    font-size: 2.2vw;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(202, 175, 146);
     font-weight: bold;
     text-decoration: none;
-    margin-right: 50px;
 }
 
 .pre-cadastro {
