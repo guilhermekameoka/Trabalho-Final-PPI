@@ -1,28 +1,25 @@
 window.onload = function () {
-    const inputCep = document.querySelector("#cep");
-    inputCep.onkeyup = () => buscaEndereco(inputCep.value);
+  const inputCep = document.getElementById("cep");
+  inputCep.onkeyup = () => buscaEndereco(inputCep.value);
 }
 
-function buscaEndereco(cep) {
-      
-    if (cep.length != 9) return;      
-    let form = document.querySelector("form");
-    
-    fetch("../../www/php/buscaEndereco.php?cep=" + cep)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(response.status);
-        }
-        return response.json();
-      })
-      .then(endereco => {
-        form.logradouro.value = endereco.logradouro;
-        form.cidade.value = endereco.cidade;
-        form.estado.value = endereco.estado;
-      })
-      .catch(error => {
-        //form.reset();
-        console.error('Falha inesperada: ' + error);
-      });
-  }
+async function buscaEndereco(cep) {
+  if (cep.length !== 9) return;
+  let form = document.querySelector("form");
 
+  try {
+    const response = await fetch(`../../www/php/buscaEndereco.php?cep=${cep}`);
+
+    if (!response.ok) {
+      throw new Error(response.status);
+    }
+
+    const endereco = await response.json();
+    form.bairro.value = endereco.bairro;
+    form.cidade.value = endereco.cidade;
+    form.estado.value = endereco.estado;
+  } catch (error) {
+    //form.reset();
+    console.error('Falha inesperada: ' + error);
+  }
+}
