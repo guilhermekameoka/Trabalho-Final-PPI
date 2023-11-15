@@ -17,8 +17,8 @@
     <header>
         <nav class="navbar navbar-expand-xl navbar-dark fixed-top" id="navbar">
             <a class="navbar-brand" href="../../../../index.html">
-                <div class="d-flex align-items-center" id="logo-items-flex">
-                    <img src="../../../assets/images/logo.jpg" class="logo" id="logo" alt="Logomarca CiniSimples">
+                <div class="d-flex align-items-center">
+                    <img src="../../../assets/images/logo.jpg" class="logo" alt="Logomarca CiniSimples">
                     <h1 id="CliniSimples" class="ml-2">CliniSimples</h1>
                 </div>
             </a>
@@ -29,23 +29,24 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link color-white" href="../../../../index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color-white" href="sobre.html">Sobre</a>
+                        <a class="nav-link color-white" href="./sobre.html">Sobre</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color-white" href="acesso.html">Acesso</a>
+                        <a class="nav-link color-white" href="./cadastro.html">Cadastro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link color-white" href="./login.html">Login</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-    
-    
-    
+
     <main>
         <form action="../../php/cadastroPaciente.php" method="POST">
             <div class="container">
@@ -230,6 +231,8 @@
     <footer>
         <p>CliniSimples - Trabalho final PPI</p>
     </footer>
+
+    <script href="../../../assets/js/ajaxBuscaEndereco.js"></script>
 </body>
 
 </html>
