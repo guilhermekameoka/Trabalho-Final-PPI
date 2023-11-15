@@ -8,7 +8,7 @@ function buscaEndereco(cep) {
     if (cep.length != 9) return;      
     let form = document.querySelector("form");
     
-    fetch("../../Back-End/buscaEndereco.php?cep=" + cep)
+    fetch("../../www/php/buscaEndereco.php?cep=" + cep)
       .then(response => {
         if (!response.ok) {
           throw new Error(response.status);
