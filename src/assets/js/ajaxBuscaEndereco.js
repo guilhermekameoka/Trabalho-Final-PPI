@@ -15,6 +15,7 @@ async function buscaEndereco(cep) {
     }
 
     const endereco = await response.json();
+    form.rua.value = endereco.rua;
     form.bairro.value = endereco.bairro;
     form.cidade.value = endereco.cidade;
     form.estado.value = endereco.estado;
