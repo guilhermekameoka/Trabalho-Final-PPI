@@ -1,3 +1,12 @@
+<?php
+require "conexao.php";
+$pdo = mysqlConnect();
+
+// Consulta para obter todos os profissionais
+$consulta_profissionais = "SELECT * FROM agenda_paciente";
+$stmt_profissionais = $pdo->query($consulta_profissionais);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -9,13 +18,13 @@
     <link rel="stylesheet" href="../../../../assets/css/media.css">
     <link rel="stylesheet" href="../../../../assets/css/bootstrap.min.css">
     <script src="../../../../assets/js/bootstrap.bundle.min.js"></script>
-    <title>Seus pacientes</title>
+    <title>Seus agendamentos</title>
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-xl navbar-dark fixed-top" id="navbar">
-            <a class="navbar-brand" href="./homeFuncionario.php">
+            <a class="navbar-brand" href="./home.php">
                 <div class="d-flex align-items-center">
                     <img src="../../../../assets/images/logo.jpg" class="logo" alt="Logomarca CiniSimples">
                     <h1 id="CliniSimples" class="ml-2">CliniSimples</h1>
@@ -28,16 +37,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link color-white" href="./homeFuncionario.php">Home</a>
+                        <a class="nav-link color-white" href="./home.php">Home</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link color-white" href="./perfilFuncionario.html">Perfil</a>
+                        <a class="nav-link color-white" href="./perfil.html">Perfil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color-white" href="./agendaFuncionario.php">Agenda</a>
+                        <a class="nav-link color-white" href="./agenda.php">Agendamentos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color-white" href="./pacientes.html">Pacientes</a>
+                        <a class="nav-link color-white" href="./agendarConsulta.html">Agendar consulta</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link color-white" href="../../../../../index.html">Sair</a>
@@ -49,7 +58,7 @@
     <main>
         <div class="container">
             <div class="agendamento">
-                <h2>Seus pacientes</h2>
+                <h2>Agendamentos</h2>
                 <form>
                     <div class="row">
                         <div class="col-sm-12 d-flex">
@@ -70,42 +79,36 @@
                 <table class="table table-striped table-sm text-center">
                     <thead>
                         <tr class="text-center table-success">
-                            <th>Paciente</th>
-                            <th>Data nasc.</th>
-                            <th>Sexo</th>
-                            <th>Convênio</th>
+                            <th>Data</th>
+                            <th>Hora</th>
+                            <th>Esp.</th>
+                            <th>Profissional</th>
                             <th>Ação</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>Fulano</td>
-                            <td>05/11/1994</td>
-                            <td>Masculino</td>
-                            <td>Unimed</td>
-                            <td>
-                                <button class="btn btn-danger btn-sm">Remover</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Ciclano</td>
-                            <td>07/03/2002</td>
-                            <td>Feminino</td>
-                            <td>SF</td>
-                            <td>
-                                <button class="btn btn-danger btn-sm">Remover</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Beltrano</td>
-                            <td>26/09/1988</td>
-                            <td>Feminino</td>
-                            <td>Nenhum</td>
-                            <td>
-                                <button class="btn btn-danger btn-sm">Remover</button>
-                            </td>
-                        </tr>
-                    </tbody>
+                    <?php
+                    // Verifica se há resultados
+                    if ($stmt_profissionais->rowCount() > 0) {
+                        while ($profissional = $stmt_profissionais->fetch(PDO::FETCH_ASSOC)) {
+                            echo "<tr>";
+                            echo "<td>" . (isset($profissional['data_consulta']) ? $profissional['data_consulta'] : '') . "</td>";
+                            echo "<td>" . (isset($profissional['hora_consulta']) ? $profissional['hora_consulta'] : '') . "</td>";
+                            echo "<td>" . (isset($profissional['especialidade']) ? $profissional['especialidade'] : '') . "</td>";
+                            echo "<td>" . (isset($profissional['nome_profissional']) ? $profissional['nome_profissional'] : '') . "</td>";
+                            echo "<td>";
+                            echo "<div class='d-block'>";
+                            echo "<button class='btn btn-primary btn-sm'>Remarcar</button>";
+                            echo "</div>";
+                            echo "<div class='d-block'>";
+                            echo "<button class='btn btn-danger btn-sm'>Cancelar</button>";
+                            echo "</div>";
+                            echo "</td>";
+                            echo "</tr>";
+                        }
+                    } else {
+                        echo "<tr><td colspan='5'>Nenhum profissional encontrado.</td></tr>";
+                    }
+                    ?>
                 </table>
             </div>
         </div>

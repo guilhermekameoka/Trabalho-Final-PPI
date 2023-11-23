@@ -26,28 +26,26 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] !== "1") {
 <body>
     <header>
         <nav class="navbar navbar-expand-xl navbar-dark fixed-top" id="navbar">
-            <a class="navbar-brand" href="./homeFuncionario.html">
+            <a class="navbar-brand" href="./homeFuncionario.php">
                 <div class="d-flex align-items-center">
                     <img src="../../../../assets/images/logo.jpg" class="logo" alt="Logomarca CiniSimples">
                     <h1 id="CliniSimples" class="ml-2">CliniSimples</h1>
                 </div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link color-white" href="./homeFuncionario.html">Home</a>
+                        <a class="nav-link color-white" href="./homeFuncionario.php">Home</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link color-white" href="./perfilFuncionario.html">Perfil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color-white" href="./agendaFuncionario.html">Agenda</a>
+                        <a class="nav-link color-white" href="./agendaFuncionario.php">Agenda</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link color-white" href="./pacientes.html">Pacientes</a>

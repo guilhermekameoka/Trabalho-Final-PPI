@@ -26,28 +26,26 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] !== "1") {
 <body>
     <header>
         <nav class="navbar navbar-expand-xl navbar-dark fixed-top" id="navbar">
-            <a class="navbar-brand" href="./home.html">
+            <a class="navbar-brand" href="./home.php">
                 <div class="d-flex align-items-center">
                     <img src="../../../../assets/images/logo.jpg" class="logo" alt="Logomarca CiniSimples">
                     <h1 id="CliniSimples" class="ml-2">CliniSimples</h1>
                 </div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link color-white" href="./home.html">Home</a>
+                        <a class="nav-link color-white" href="./home.php">Home</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link color-white" href="./perfil.html">Perfil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color-white" href="./agenda.html">Agendamentos</a>
+                        <a class="nav-link color-white" href="./agenda.php">Agendamentos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link color-white" href="./agendarConsulta.html">Agendar consulta</a>
@@ -77,7 +75,7 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] !== "1") {
                 </div>
                 <div class="row">
                     <div class="col-md-3">
-                        <a href="./agenda.html">
+                        <a href="./agenda.php">
                             <img src="../../../../assets/images/agenda.png" alt="Agendamentos">
                             <h3>Agendamentos</h3>
                         </a>

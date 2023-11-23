@@ -1,3 +1,12 @@
+<?php
+require "conexao.php";
+$pdo = mysqlConnect();
+
+// Consulta para obter todos os pacientes
+$consulta_pacientes = "SELECT * FROM agenda_funcionario";
+$stmt_pacientes = $pdo->query($consulta_pacientes);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -9,7 +18,7 @@
     <link rel="stylesheet" href="../../../../assets/css/media.css">
     <link rel="stylesheet" href="../../../../assets/css/bootstrap.min.css">
     <script src="../../../../assets/js/bootstrap.bundle.min.js"></script>
-    <title>Seus pacientes</title>
+    <title>Sua agenda</title>
 </head>
 
 <body>
@@ -49,7 +58,7 @@
     <main>
         <div class="container">
             <div class="agendamento">
-                <h2>Seus pacientes</h2>
+                <h2>Agenda</h2>
                 <form>
                     <div class="row">
                         <div class="col-sm-12 d-flex">
@@ -68,43 +77,29 @@
 
 
                 <table class="table table-striped table-sm text-center">
-                    <thead>
-                        <tr class="text-center table-success">
-                            <th>Paciente</th>
-                            <th>Data nasc.</th>
-                            <th>Sexo</th>
-                            <th>Convênio</th>
-                            <th>Ação</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Fulano</td>
-                            <td>05/11/1994</td>
-                            <td>Masculino</td>
-                            <td>Unimed</td>
-                            <td>
-                                <button class="btn btn-danger btn-sm">Remover</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Ciclano</td>
-                            <td>07/03/2002</td>
-                            <td>Feminino</td>
-                            <td>SF</td>
-                            <td>
-                                <button class="btn btn-danger btn-sm">Remover</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Beltrano</td>
-                            <td>26/09/1988</td>
-                            <td>Feminino</td>
-                            <td>Nenhum</td>
-                            <td>
-                                <button class="btn btn-danger btn-sm">Remover</button>
-                            </td>
-                        </tr>
+                    <?php
+                    // Verifica se há resultados
+                    if ($stmt_pacientes->rowCount() > 0) {
+                        while ($paciente = $stmt_pacientes->fetch(PDO::FETCH_ASSOC)) {
+                            echo "<tr>";
+                            echo "<td>{$paciente['data_consulta']}</td>";
+                            echo "<td>{$paciente['hora_consulta']}</td>";
+                            echo "<td>{$paciente['nome_paciente']}</td>";
+                            echo "<td>{$paciente['sexo']}</td>";
+                            echo "<td>";
+                            echo "<div class='d-block'>";
+                            echo "<button class='btn btn-primary btn-sm'>Remarcar</button>";
+                            echo "</div>";
+                            echo "<div class='d-block'>";
+                            echo "<button class='btn btn-danger btn-sm'>Cancelar</button>";
+                            echo "</div>";
+                            echo "</td>";
+                            echo "</tr>";
+                        }
+                    } else {
+                        echo "<tr><td colspan='5'>Nenhum paciente encontrado.</td></tr>";
+                    }
+                    ?>
                     </tbody>
                 </table>
             </div>

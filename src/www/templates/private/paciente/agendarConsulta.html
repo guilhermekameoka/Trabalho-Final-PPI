@@ -16,15 +16,13 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-xl navbar-dark fixed-top" id="navbar">
-            <a class="navbar-brand" href="./home.html">
+            <a class="navbar-brand" href="./home.php">
                 <div class="d-flex align-items-center">
                     <img src="../../../../assets/images/logo.jpg" class="logo" alt="Logomarca CiniSimples">
                     <h1 id="CliniSimples" class="ml-2">CliniSimples</h1>
                 </div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -37,7 +35,7 @@
                         <a class="nav-link color-white" href="./perfil.html">Perfil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color-white" href="./agenda.html">Agendamentos</a>
+                        <a class="nav-link color-white" href="./agenda.php">Agendamentos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link color-white" href="./agendarConsulta.html">Agendar consulta</a>
@@ -88,7 +86,7 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input type="date" name="data" id="data" class="form-control">
+                                    <input type="date" name="data_consulta" id="data_consulta" class="form-control">
                                     <label for="data">Data consulta</label>
                                 </div>
 
@@ -117,6 +115,7 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="row">
                             <div class="col-sm-6">
                                 <select class="form-select" name="convenio" id="convenio">
@@ -150,8 +149,8 @@
 
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input class="form-control" type="date" id="data-nascimento" name="data-nascimento">
-                                    <label for="data-nascimento">Data de nascimento</label>
+                                    <input class="form-control" type="date" id="data_nascimento" name="data_nascimento">
+                                    <label for="data_nascimento">Data de nascimento</label>
                                     <div class="alert alert-danger alert-dismissible" id="alertaDataNascimento">
                                         <span>A data de nascimento deve ser preenchida!</span>
                                     </div>
