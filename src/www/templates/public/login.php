@@ -15,9 +15,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt_paciente = $pdo->prepare($consulta_paciente);
         $stmt_paciente->execute([$email]);
 
-        echo "<h1> DEU CERTO CARALHO </h1>";
-
-
         if ($stmt_paciente->rowCount() > 0) {
             $dados_paciente = $stmt_paciente->fetch(PDO::FETCH_ASSOC);
 

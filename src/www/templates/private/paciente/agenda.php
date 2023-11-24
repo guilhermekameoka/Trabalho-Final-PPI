@@ -1,5 +1,5 @@
 <?php
-require "conexao.php";
+require "../../../php/conexao.php";
 require "sessionmanager.php";
 session_start();
 

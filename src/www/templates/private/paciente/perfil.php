@@ -1,6 +1,6 @@
 <?php
 // Conexão com o banco de dados
-require "conexao.php";
+require "../../../php/conexao.php";
 require "sessionmanager.php";
 session_start();
 
@@ -70,7 +70,6 @@ $dadosUsuario = $stmtUsuario->fetch(PDO::FETCH_ASSOC);
         <div class="container">
             <div class="perfil">
                 <h3>Seu perfil</h3>
-                <!-- <img id="fotoPerfil" src="../../../../assets/images/perfil.jpg" alt="Foto de perfil"> -->
                 <table class="table table-striped table-sm text-center">
                     <thead>
                         <tr>
@@ -78,13 +77,7 @@ $dadosUsuario = $stmtUsuario->fetch(PDO::FETCH_ASSOC);
                         </tr>
                     </thead>
                     <tbody class="tbody-dark">
-                        <!-- <tr>
-                            <th>Foto:</th>
-                            <td colspan="2">
-                                <input id="insereImg" type="file" name="foto" accept="image/*">
-                            </td>
-                        </tr> -->
-                        <tr class="table-secondary">
+                                     <tr class="table-secondary">
                             <th>Nome:</th>
                             <td>
                                 <?php echo $dadosUsuario['nome']; ?>

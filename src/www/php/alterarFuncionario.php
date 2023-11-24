@@ -18,6 +18,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"] ?? "";
     $senha = $_POST["senha"] ?? "";
 
+    $especialidade = $_POST["especialidade"] ?? "";
+    $regpro = $_POST["regpro"] ?? "";
+
     $telefone = $_POST["telefone"] ?? "";
 
     $cep = $_POST["cep"] ?? "";
@@ -30,13 +33,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $hashsenha = password_hash($senha, PASSWORD_DEFAULT);
 
     // Altera na tabela paciente
-    $sql = "UPDATE paciente 
+    $sql = "UPDATE funcionario 
         SET nome = ?, 
             cpf = ?, 
             data_nascimento = ?, 
             sexo = ?, 
             email = ?, 
             hash_senha = ?, 
+            especialidade = ?,
+            regpro = ?,
             telefone = ?, 
             cep = ?, 
             rua = ?, 
@@ -46,14 +51,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         WHERE id = ?";
 
     try {
-        // Alteração na tabela paciente
+        // Inserção na tabela funcionario
         $stmt = $pdo->prepare($sql);
-        if (!$stmt->execute([$nome, $cpf, $dataNascimento, $sexo, $email, $hashsenha, $telefone, $cep, $rua, $bairro, $cidade, $estado, $id])) {
-            throw new Exception('Falha na alteração de paciente');
+        if (!$stmt->execute([$nome, $cpf, $dataNascimento, $sexo, $email, $hashsenha, $especialidade, $regpro, $telefone, $cep, $rua, $bairro, $cidade, $estado, $id])) {
+            throw new Exception('Falha na inserção de funcionário');
         }
 
         // Redireciona para a página inicial
-        header("location: ../templates/private/paciente/perfil.php");
+        header("location: ../templates/private/funcionario/perfilFuncionario.php");
 
         exit();
     } catch (Exception $e) {

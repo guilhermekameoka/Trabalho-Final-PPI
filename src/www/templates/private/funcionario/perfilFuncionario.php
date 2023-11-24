@@ -1,6 +1,6 @@
 <?php
 // Conexão com o banco de dados
-require "conexao.php";
+require "../../../php/conexao.php";
 require "sessionmanager.php";
 session_start();
 
@@ -70,7 +70,6 @@ $dadosUsuario = $stmtUsuario->fetch(PDO::FETCH_ASSOC);
         <div class="container">
             <div class="perfil">
                 <h3>Seu perfil</h3>
-                <img id="fotoPerfil" src="../../../../assets/images/perfil.jpg" alt="Foto de perfil">
                 <h3>
                     <?php echo $dadosUsuario['nome']; ?>
                 </h3>
@@ -82,19 +81,10 @@ $dadosUsuario = $stmtUsuario->fetch(PDO::FETCH_ASSOC);
                         </tr>
                     </thead>
                     <tbody class="tbody-dark">
-                        <tr>
-                            <th>Foto:</th>
-                            <td colspan="2">
-                                <input id="insereImg" type="file" name="foto" accept="image/*">
-                            </td>
-                        </tr>
                         <tr class="table-secondary">
                             <th>Nome:</th>
                             <td>
                                 <?php echo $dadosUsuario['nome']; ?>
-                            </td>
-                            <td>
-                                <button class="btn btn-success btn-sm">Editar</button>
                             </td>
                         </tr>
                         <tr>
@@ -102,17 +92,11 @@ $dadosUsuario = $stmtUsuario->fetch(PDO::FETCH_ASSOC);
                             <td>
                                 <?php echo $dadosUsuario['email']; ?>
                             </td>
-                            <td>
-                                <button class="btn btn-success btn-sm">Editar</button>
-                            </td>
                         </tr>
                         <tr class="table-secondary">
                             <th>CPF:</th>
                             <td>
                                 <?php echo $dadosUsuario['cpf']; ?>
-                            </td>
-                            <td>
-                                <button class="btn btn-success btn-sm">Editar</button>
                             </td>
                         </tr>
                         <tr>
@@ -120,17 +104,11 @@ $dadosUsuario = $stmtUsuario->fetch(PDO::FETCH_ASSOC);
                             <td>
                                 <?php echo $dadosUsuario['data_nascimento']; ?>
                             </td>
-                            <td>
-                                <button class="btn btn-success btn-sm">Editar</button>
-                            </td>
                         </tr>
                         <tr>
                             <th>Rua:</th>
                             <td>
                                 <?php echo $dadosUsuario['rua']; ?>
-                            </td>
-                            <td>
-                                <button class="btn btn-success btn-sm">Editar</button>
                             </td>
                         </tr>
                         <tr>
@@ -138,17 +116,11 @@ $dadosUsuario = $stmtUsuario->fetch(PDO::FETCH_ASSOC);
                             <td>
                                 <?php echo $dadosUsuario['bairro']; ?>
                             </td>
-                            <td>
-                                <button class="btn btn-success btn-sm">Editar</button>
-                            </td>
                         </tr>
                         <tr>
                             <th>Cidade:</th>
                             <td>
                                 <?php echo $dadosUsuario['cidade']; ?>
-                            </td>
-                            <td>
-                                <button class="btn btn-success btn-sm">Editar</button>
                             </td>
                         </tr>
                         <tr>
@@ -156,14 +128,16 @@ $dadosUsuario = $stmtUsuario->fetch(PDO::FETCH_ASSOC);
                             <td>
                                 <?php echo $dadosUsuario['estado']; ?>
                             </td>
-                            <td>
-                                <button class="btn btn-success btn-sm">Editar</button>
-                            </td>
                         </tr>
                     </tbody>
                 </table>
                 <div class="excluir-conta">
-                    <button class="btn btn-danger btn-sm">Excluir conta</button>
+                    <a href="../../../php/excluirConta.php">
+                        <button class="btn btn-danger btn-sm">Excluir conta</button>
+                    </a>
+                    <a href="alterarCadastro.php">
+                        <button class="btn btn-success btn-sm">Alterar dados</button>
+                    </a>
                 </div>
             </div>
         </div>

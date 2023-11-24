@@ -1,5 +1,5 @@
 <?php
-require "conexao.php";
+require "../../../php/conexao.php";
 $pdo = mysqlConnect();
 
 // Consulta para obter todos os pacientes

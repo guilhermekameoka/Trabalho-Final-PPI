@@ -2,20 +2,20 @@
 
 function mysqlConnect()
 {
-    // $db_host = "sql312.infinityfree.com";
-    // $db_username = "if0_34389125";
-    // $db_password = "s6fj5Hs1zmdG3A";
-    // $db_name = "if0_34389125_ppi";
+    $db_host = "sql312.infinityfree.com";
+    $db_username = "if0_34389125";
+    $db_password = "s6fj5Hs1zmdG3A";
+    $db_name = "if0_34389125_ppi";
 
     // $db_host =      "sql300.infinityfree.com";
     // $db_username =  "if0_34875662";
     // $db_password =  "cLcCj3zsSwqyDn";
     // $db_name =      "if0_34875662_clinica";
 
-    $db_host =      "localhost";
-    $db_username =  "root";
-    $db_password =  "";
-    $db_name =      "ppi";
+    // $db_host =      "localhost";
+    // $db_username =  "root";
+    // $db_password =  "";
+    // $db_name =      "ppi";
 
     // dsn é apenas um acrônimo de database source name
     $dsn = "mysql:host=$db_host;dbname=$db_name;charset=utf8mb4";
