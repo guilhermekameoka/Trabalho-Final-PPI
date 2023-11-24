@@ -2,10 +2,17 @@
 
 function mysqlConnect()
 {
+<<<<<<< HEAD
     $db_host = "sql312.infinityfree.com";
     $db_username = "if0_34389125";
     $db_password = "s6fj5Hs1zmdG3A";
     $db_name = "if0_34389125_ppi";
+=======
+    // $db_host = "sql312.infinityfree.com";
+    // $db_username = "if0_34389125";
+    // $db_password = "s6fj5Hs1zmdG3A";
+    // $db_name = "if0_34389125_ppi";
+>>>>>>> d5e342313861798e178a79185a763ab65b56db2a
 
     // $db_host =      "sql300.infinityfree.com";
     // $db_username =  "if0_34875662";
@@ -13,10 +20,17 @@ function mysqlConnect()
     // $db_name =      "if0_34875662_clinica";
 
 
+<<<<<<< HEAD
     // $db_host =      "localhost";
     // $db_username =  "root";
     // $db_password =  "";
     // $db_name =      "ppi";
+=======
+    $db_host =      "localhost";
+    $db_username =  "root";
+    $db_password =  "";
+    $db_name =      "ppi";
+>>>>>>> d5e342313861798e178a79185a763ab65b56db2a
 
     // dsn é apenas um acrônimo de database source name
     $dsn = "mysql:host=$db_host;dbname=$db_name;charset=utf8mb4";

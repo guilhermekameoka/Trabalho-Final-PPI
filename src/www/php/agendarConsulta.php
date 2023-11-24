@@ -12,11 +12,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"] ?? "";
     $telefone = $_POST["telefone"] ?? "";
 
+<<<<<<< HEAD
     // $especialidade = $_POST["especialidade"] ?? "";
     $nome_profissional = $_POST["nomeProfissional"] ?? "";
     $data_consulta = $_POST["data_consulta"] ?? "";
     $horario_consulta = $_POST["horario_consulta"] ?? "";
     $especialidade = "NULL";
+=======
+    $especialidade = $_POST["especialidade"] ?? "";
+    $nome_profissional = $_POST["nomeProfissional"] ?? "";
+    $data_consulta = $_POST["data_consulta"] ?? "";
+    $horario_consulta = $_POST["horario_consulta"] ?? "";
+>>>>>>> d5e342313861798e178a79185a763ab65b56db2a
     $convenio = $_POST["convenio"] ?? "";
 
     try {

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/www/templates/private/paciente/agendarConsulta.php
 <?php
 require "conexao.php";
 $pdo = mysqlConnect();
@@ -7,6 +8,8 @@ $funcionarios = "SELECT id, nome, especialidade FROM funcionario";
 $stmt_funcionario = $pdo->query($funcionarios);
 ?>
 
+=======
+>>>>>>> d5e342313861798e178a79185a763ab65b56db2a:src/www/templates/private/paciente/agendarConsulta.html
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -47,7 +50,11 @@ $stmt_funcionario = $pdo->query($funcionarios);
                         <a class="nav-link color-white" href="./agenda.php">Agendamentos</a>
                     </li>
                     <li class="nav-item">
+<<<<<<< HEAD:src/www/templates/private/paciente/agendarConsulta.php
                         <a class="nav-link color-white" href="./agendarConsulta.php">Agendar consulta</a>
+=======
+                        <a class="nav-link color-white" href="./agendarConsulta.html">Agendar consulta</a>
+>>>>>>> d5e342313861798e178a79185a763ab65b56db2a:src/www/templates/private/paciente/agendarConsulta.html
                     </li>
                     <li class="nav-item">
                         <a class="nav-link color-white" href="../../../../../index.html">Sair</a>
@@ -66,9 +73,13 @@ $stmt_funcionario = $pdo->query($funcionarios);
                         <legend>Informações da consulta</legend>
 
                         <div class="row">
+<<<<<<< HEAD:src/www/templates/private/paciente/agendarConsulta.php
                             <!-- ESPECIALIDADE REMOVED -->
 
                             <!-- <div class="col-sm-6">
+=======
+                            <div class="col-sm-6">
+>>>>>>> d5e342313861798e178a79185a763ab65b56db2a:src/www/templates/private/paciente/agendarConsulta.html
                                 <select class="form-select" name="especialidade" id="especialidade">
                                     <option value=""> Especialidade</option>
                                     <option value="nutricionista">Nutricionista</option>
@@ -80,6 +91,7 @@ $stmt_funcionario = $pdo->query($funcionarios);
                                 <div class="alert alert-danger alert-dismissible" id="alertaEspecialidade">
                                     <span>A especialidade deve ser selecionada!</span>
                                 </div>
+<<<<<<< HEAD:src/www/templates/private/paciente/agendarConsulta.php
                             </div> -->
 
                             <div class="col-sm-6">
@@ -92,6 +104,15 @@ $stmt_funcionario = $pdo->query($funcionarios);
                                     <?php endforeach; ?>
 
 
+=======
+                            </div>
+                            <div class="col-sm-6">
+                                <select class="form-select" name="nomeProfissional" id="nomeProfissional">
+                                    <option value="">Profissional</option>
+                                    <option value="Fulano">Fulano</option>
+                                    <option value="Ciclano">Ciclano</option>
+                                    <option value="Beltrano">Beltrano</option>
+>>>>>>> d5e342313861798e178a79185a763ab65b56db2a:src/www/templates/private/paciente/agendarConsulta.html
                                 </select>
                                 <div class="alert alert-danger alert-dismissible" id="alertaNomeProfissional">
                                     <span>O profissional deve ser selecionado!</span>
@@ -203,7 +224,12 @@ $stmt_funcionario = $pdo->query($funcionarios);
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-floating">
+<<<<<<< HEAD:src/www/templates/private/paciente/agendarConsulta.php
                                     <input class="form-control" type="tel" id="telefone" name="telefone" placeholder=" ">
+=======
+                                    <input class="form-control" type="tel" id="telefone" name="telefone"
+                                        placeholder=" ">
+>>>>>>> d5e342313861798e178a79185a763ab65b56db2a:src/www/templates/private/paciente/agendarConsulta.html
                                     <label for="telefone">Telefone</label>
                                     <div class="alert alert-danger alert-dismissible" id="alertaTelefone">
                                         <span>O telefone deve ser preenchido!</span>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src/www/templates/private/funcionario/pacientes.php
 <?php
 require "conexao.php";
 $pdo = mysqlConnect();
@@ -7,6 +8,8 @@ $pacientes = "SELECT * FROM paciente";
 $stmt_pacientes = $pdo->query($pacientes);
 ?>
 
+=======
+>>>>>>> d5e342313861798e178a79185a763ab65b56db2a:src/www/templates/private/funcionario/pacientes.html
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -46,7 +49,11 @@ $stmt_pacientes = $pdo->query($pacientes);
                         <a class="nav-link color-white" href="./agendaFuncionario.php">Agenda</a>
                     </li>
                     <li class="nav-item">
+<<<<<<< HEAD:src/www/templates/private/funcionario/pacientes.php
                         <a class="nav-link color-white" href="./pacientes.php">Pacientes</a>
+=======
+                        <a class="nav-link color-white" href="./pacientes.html">Pacientes</a>
+>>>>>>> d5e342313861798e178a79185a763ab65b56db2a:src/www/templates/private/funcionario/pacientes.html
                     </li>
                     <li class="nav-item">
                         <a class="nav-link color-white" href="../../../../../index.html">Sair</a>
@@ -55,7 +62,10 @@ $stmt_pacientes = $pdo->query($pacientes);
             </div>
         </nav>
     </header>
+<<<<<<< HEAD:src/www/templates/private/funcionario/pacientes.php
     
+=======
+>>>>>>> d5e342313861798e178a79185a763ab65b56db2a:src/www/templates/private/funcionario/pacientes.html
     <main>
         <div class="container">
             <div class="agendamento">
@@ -83,11 +93,16 @@ $stmt_pacientes = $pdo->query($pacientes);
                             <th>Paciente</th>
                             <th>Data nasc.</th>
                             <th>Sexo</th>
+<<<<<<< HEAD:src/www/templates/private/funcionario/pacientes.php
                             <th>Telefone</th>
+=======
+                            <th>Convênio</th>
+>>>>>>> d5e342313861798e178a79185a763ab65b56db2a:src/www/templates/private/funcionario/pacientes.html
                             <th>Ação</th>
                         </tr>
                     </thead>
                     <tbody>
+<<<<<<< HEAD:src/www/templates/private/funcionario/pacientes.php
                         <?php foreach ($stmt_pacientes as $paciente) : ?>
                             <tr>
                                 <td><?php echo $paciente['nome']; ?></td>
@@ -99,6 +114,35 @@ $stmt_pacientes = $pdo->query($pacientes);
                                 </td>
                             </tr>
                         <?php endforeach; ?>
+=======
+                        <tr>
+                            <td>Fulano</td>
+                            <td>05/11/1994</td>
+                            <td>Masculino</td>
+                            <td>Unimed</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm">Remover</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ciclano</td>
+                            <td>07/03/2002</td>
+                            <td>Feminino</td>
+                            <td>SF</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm">Remover</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Beltrano</td>
+                            <td>26/09/1988</td>
+                            <td>Feminino</td>
+                            <td>Nenhum</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm">Remover</button>
+                            </td>
+                        </tr>
+>>>>>>> d5e342313861798e178a79185a763ab65b56db2a:src/www/templates/private/funcionario/pacientes.html
                     </tbody>
                 </table>
             </div>

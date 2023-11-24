@@ -46,7 +46,11 @@ $stmt_pacientes = $pdo->query($consulta_pacientes);
                         <a class="nav-link color-white" href="./agendaFuncionario.php">Agenda</a>
                     </li>
                     <li class="nav-item">
+<<<<<<< HEAD
                         <a class="nav-link color-white" href="./pacientes.php">Pacientes</a>
+=======
+                        <a class="nav-link color-white" href="./pacientes.html">Pacientes</a>
+>>>>>>> d5e342313861798e178a79185a763ab65b56db2a
                     </li>
                     <li class="nav-item">
                         <a class="nav-link color-white" href="../../../../../index.html">Sair</a>
@@ -55,7 +59,10 @@ $stmt_pacientes = $pdo->query($consulta_pacientes);
             </div>
         </nav>
     </header>
+<<<<<<< HEAD
 
+=======
+>>>>>>> d5e342313861798e178a79185a763ab65b56db2a
     <main>
         <div class="container">
             <div class="agendamento">
