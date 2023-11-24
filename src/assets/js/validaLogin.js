@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
         campos.forEach(({ input, alerta }) => {
             validaInput(input, alerta);
         });
+
+        console.log("Deu certo!")
     });
 
     campos.forEach(({ input, alerta }) => {

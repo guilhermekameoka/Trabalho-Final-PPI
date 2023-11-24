@@ -1,3 +1,70 @@
+<?php
+require "conexao.php";
+$pdo = mysqlConnect();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $email = $_POST["email"] ?? "";
+    $senha = $_POST["senha"] ?? "";
+
+    try {
+        $pdo->beginTransaction();
+
+        // Verifica se é paciente
+        $consulta_paciente = "SELECT * FROM paciente WHERE email = ?";
+        $stmt_paciente = $pdo->prepare($consulta_paciente);
+        $stmt_paciente->execute([$email]);
+
+        echo "<h1> DEU CERTO CARALHO </h1>";
+
+
+        if ($stmt_paciente->rowCount() > 0) {
+            $dados_paciente = $stmt_paciente->fetch(PDO::FETCH_ASSOC);
+
+            // Verifica se a senha corresponde com a senha hash
+            try {
+                if (password_verify($senha, $dados_paciente['senha'])) {
+                    session_start();
+                    $_SESSION["login"] = "1";
+                    $_SESSION["nome"] = $row['nome'];
+                    header("location: acesso.html");
+                    exit();
+                }
+            } catch (Exception $e) {
+                echo "<h1>Erro</h1>";
+                echo "<p>Mensagem: " . $e->getMessage() . "</p>";
+            }
+        }
+
+        // Verifica se é funcionário
+        $consulta_funcionario = "SELECT * FROM funcionario WHERE email = ?";
+        $stmt_funcionario = $pdo->prepare($consulta_funcionario);
+        $stmt_funcionario->execute([$email]);
+
+        if ($stmt_funcionario->rowCount() > 0) {
+            $dados_funcionario = $stmt_funcionario->fetch(PDO::FETCH_ASSOC);
+
+            // Verifica se a senha corresponde com a senha hash
+            if (password_verify($senha, $dados_funcionario['senha'])) {
+                session_start();
+                $_SESSION["login"] = "1";
+                $_SESSION["nome"] = $row['nome'];
+                header("location: acesso.html");
+                exit();
+            }
+        }
+
+        // Se chegou aqui, as credenciais não foram encontradas
+        throw new Exception('Credenciais inválidas');
+
+    } catch (Exception $e) {
+        // Rollback em caso de falha
+        $pdo->rollback();
+        exit('Falha no login: ' . $e->getMessage());
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -8,6 +75,7 @@
     <link rel="stylesheet" href="../../../assets/css/formulario.css">
     <link rel="stylesheet" href="../../../assets/css/media.css">
     <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
+    <script type="module" src="../../../assets/js/validaLogin.js"></script>
     <script src="../../../assets/js/bootstrap.bundle.min.js"></script>
     <title>Login</title>
 </head>
@@ -41,29 +109,28 @@
                 </ul>
             </div>
         </nav>
-    </header>
-
+    </header> 
+    
     <main>
         <div class="paginaLogin">
             <div class="container">
                 <h3>Login</h3>
-                <form action="../../php/login.php" method="POST" class="row g-3" id="login">
+                <form action="" method="POST" class="row g-3" id="login">
                     <div class="col-sm-12 form-floating">
                         <input type="email" name="email" class="form-control" id="email" placeholder=" " autofocus>
                         <label for="email" class="form-label labelLogin">Email</label>
+                        <div class="alert alert-danger alert-dismissible" id="alertaEmail">
+                            <span>O email deve ser preenchido!</span>
+                        </div>
                     </div>
                     <div class="col-sm-12 form-floating">
                         <input type="password" name="senha" class="form-control" id="senha" placeholder=" ">
                         <label for="senha" class="form-label labelLogin">Senha</label>
+                        <div class="alert alert-danger alert-dismissible" id="alertaSenha">
+                            <span>A senha deve ser preenchida!</span>
+                        </div>
                     </div>
-                    <button class="btn btn-primary col-sm-12 btn-success" id="botao">Entrar</button>
-
-                    <!-- <?php
-                    if (isset($_GET['erro'])) {
-                        $erro = $_GET['erro'];
-                        echo "<div class='alert alert-danger mt-3'>$erro</div>";
-                    }
-                    ?> -->
+                    <input type="submit" class="btn btn-primary col-sm-12 btn-success" id="botao" value="Entrar">
                 </form>
             </div>
         </div>

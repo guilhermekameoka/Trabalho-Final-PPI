@@ -1,13 +1,14 @@
 <?php
-session_start();
+require "conexao.php";
+$pdo = mysqlConnect();
 
-// verifica se o usuario está logado
-// se nao estiver logado, volta para tela de login
-if (!isset($_SESSION["login"]) || $_SESSION["login"] !== "1") {
-    header("Location: login.php");
-    exit();
-}
+// Consulta para obter todos os pacientes
+$consultas = "SELECT nome_profissional FROM consulta";
+$stmt_consulta = $pdo->query($consultas);
 
+// Consulta para obter todos os funcionários
+$funcionario = "SELECT nome FROM funcionario f JOIN consulta c ON f.nome = c.nome_profissional";
+$stmt_funcionario = $pdo->query($funcionario);
 ?>
 
 <!DOCTYPE html>
@@ -17,10 +18,11 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] !== "1") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../../assets/css/formulario.css">
     <link rel="stylesheet" href="../../../../assets/css/media.css">
     <link rel="stylesheet" href="../../../../assets/css/bootstrap.min.css">
     <script src="../../../../assets/js/bootstrap.bundle.min.js"></script>
-    <title>Página Inicial</title>
+    <title>Seus agendamentos</title>
 </head>
 
 <body>
@@ -57,49 +59,49 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] !== "1") {
             </div>
         </nav>
     </header>
-
     <main>
         <div class="container">
-            <div class="boas-vindas">
-                <div class="row">
-                    <h2>Olá, seja bem vindo,
-                        <?php echo htmlspecialchars($_SESSION["nome"]); ?>!
-                    </h2>
-                </div>
-                <div class="row">
-                    <h2>Como posso ajudar?</h2>
-                </div>
-                <div class=row>
-                    <div class="col-sm">
-                        <img src="../../../../assets/images/banner.png" alt="Banner" id="banner">
+            <div class="agendamento">
+                <h2>Agendamentos</h2>
+                <form>
+                    <div class="row">
+                        <div class="col-sm-12 d-flex">
+                            <div class="form-floating flex-grow-1" id="pesquisa">
+                                <input class="form-control" type="text" id="nome" placeholder=" ">
+                                <label for="nome">Pesquisar...</label>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <a href="./agenda.php">
-                            <img src="../../../../assets/images/agenda.png" alt="Agendamentos">
-                            <h3>Agendamentos</h3>
-                        </a>
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-success col-sm-2" id="botao-pesquisa">Buscar</button>
+                        </div>
                     </div>
-                    <div class="col-md-3">
-                        <a href="./agendarConsulta.html">
-                            <img src="../../../../assets/images/agendarConsulta.png" alt="Agendar consulta">
-                            <h3>Agendar consulta</h3>
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="./perfil.html">
-                            <img src="../../../../assets/images/usuario.png" alt="Perfil">
-                            <h3>Perfil</h3>
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="../../../../../index.html">
-                            <img src="../../../../assets/images/logout.png" alt="Logout">
-                            <h3>Logout</h3>
-                        </a>
-                    </div>
-                </div>
+                </form>
+
+
+                <table class="table table-striped table-sm text-center">
+                    <thead>
+                        <tr class="text-center table-success">
+                            <th>Data</th>
+                            <th>Hora</th>
+                            <th>Profissional</th>
+                        </tr>
+                    </thead>
+                    <?php
+                    if ($stmt_consulta->rowCount() > 0) {
+                        while ($consulta = $stmt_consulta->fetch(PDO::FETCH_ASSOC)) {
+                            echo "<tr>";
+                            echo "<td>" . isset($consulta['data_consulta']) . "</td>";
+                            echo "<td>" . (isset($consulta['hora_consulta']) ? $consulta['hora_consulta'] : '') . "</td>";
+                            echo "<td>" . (isset($consulta['nome_profissional']) ? $consulta['nome_profissional'] : '') . "</td>";
+                            echo "</tr>";
+                        }
+                    } else {
+                        echo "<tr><td colspan='5'>Nenhum profissional encontrado.</td></tr>";
+                    }
+                    ?>
+                </table>
             </div>
         </div>
     </main>
@@ -107,6 +109,7 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] !== "1") {
     <footer>
         <p>CliniSimples - Trabalho final PPI</p>
     </footer>
+
 </body>
 
 </html>

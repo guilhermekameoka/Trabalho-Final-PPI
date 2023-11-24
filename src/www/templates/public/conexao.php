@@ -2,10 +2,10 @@
 
 function mysqlConnect()
 {
-    $db_host = "sql312.infinityfree.com";
-    $db_username = "if0_34389125";
-    $db_password = "s6fj5Hs1zmdG3A";
-    $db_name = "if0_34389125_ppi";
+    // $db_host = "sql312.infinityfree.com";
+    // $db_username = "if0_34389125";
+    // $db_password = "s6fj5Hs1zmdG3A";
+    // $db_name = "if0_34389125_ppi";
 
     // $db_host =      "sql300.infinityfree.com";
     // $db_username =  "if0_34875662";
@@ -13,21 +13,21 @@ function mysqlConnect()
     // $db_name =      "if0_34875662_clinica";
 
 
-    // $db_host =      "localhost";
-    // $db_username =  "root";
-    // $db_password =  "";
-    // $db_name =      "ppi";
+    $db_host =      "localhost";
+    $db_username =  "root";
+    $db_password =  "";
+    $db_name =      "ppi";
 
     // dsn é apenas um acrônimo de database source name
     $dsn = "mysql:host=$db_host;dbname=$db_name;charset=utf8mb4";
 
     $options = [
         PDO::ATTR_EMULATE_PREPARES => false,
-        // desativa a execução emulada de prepared statements
+            // desativa a execução emulada de prepared statements
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        // ativa o modo de erros para lançar exceções    
+            // ativa o modo de erros para lançar exceções    
         PDO::ATTR_PERSISTENT => true,
-        // ativa o uso de conexões persistentes para maior eficiência
+            // ativa o uso de conexões persistentes para maior eficiência
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
         // altera o modo padrão do método fetch para FETCH_ASSOC
     ];
@@ -40,3 +40,5 @@ function mysqlConnect()
         exit('Ocorreu uma falha na conexão com o BD: ' . $e->getMessage());
     }
 }
+
+?>

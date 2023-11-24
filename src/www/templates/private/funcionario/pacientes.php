@@ -1,13 +1,10 @@
 <?php
-session_start();
+require "conexao.php";
+$pdo = mysqlConnect();
 
-// verifica se o usuario está logado
-// se nao estiver logado, volta para tela de login
-if (!isset($_SESSION["login"]) || $_SESSION["login"] !== "1") {
-    header("Location: login.php");
-    exit();
-}
-
+// Consulta para obter todos os pacientes
+$pacientes = "SELECT * FROM paciente";
+$stmt_pacientes = $pdo->query($pacientes);
 ?>
 
 <!DOCTYPE html>
@@ -17,10 +14,11 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] !== "1") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../../assets/css/formulario.css">
     <link rel="stylesheet" href="../../../../assets/css/media.css">
     <link rel="stylesheet" href="../../../../assets/css/bootstrap.min.css">
     <script src="../../../../assets/js/bootstrap.bundle.min.js"></script>
-    <title>Página Inicial</title>
+    <title>Seus pacientes</title>
 </head>
 
 <body>
@@ -57,50 +55,52 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] !== "1") {
             </div>
         </nav>
     </header>
-
-
+    
     <main>
         <div class="container">
-            <div class="boas-vindas">
-                <div class="row">
-                    <h2>Olá, seja bem vindo,
-                        <?php echo htmlspecialchars($_SESSION["nome"]); ?>!
-                    </h2>
-                </div>
-                <div class="row">
-                    <h2>Como posso ajudar?</h2>
-                </div>
-                <div class=row>
-                    <div class="col-sm">
-                        <img src="../../../../assets/images/banner.png" alt="Banner" id="banner">
+            <div class="agendamento">
+                <h2>Seus pacientes</h2>
+                <form>
+                    <div class="row">
+                        <div class="col-sm-12 d-flex">
+                            <div class="form-floating flex-grow-1" id="pesquisa">
+                                <input class="form-control" type="text" id="nome" placeholder=" ">
+                                <label for="nome">Pesquisar...</label>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <a href="./agendaFuncionario.html">
-                            <img src="../../../../assets/images/agenda.png" alt="Sua agenda">
-                            <h3>Agenda</h3>
-                        </a>
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-success col-sm-2" id="botao-pesquisa">Buscar</button>
+                        </div>
                     </div>
-                    <div class="col-md-3">
-                        <a href="./pacientes.html">
-                            <img src="../../../../assets/images/pacientes.png" alt="Agendar consulta">
-                            <h3>Pacientes</h3>
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="./perfilFuncionario.html">
-                            <img src="../../../../assets/images/usuario.png" alt="Seu perfil">
-                            <h3>Perfil</h3>
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="../../../../../index.html">
-                            <img src="../../../../assets/images/logout.png" alt="Logout">
-                            <h3>Logout</h3>
-                        </a>
-                    </div>
-                </div>
+                </form>
+
+
+                <table class="table table-striped table-sm text-center">
+                    <thead>
+                        <tr class="text-center table-success">
+                            <th>Paciente</th>
+                            <th>Data nasc.</th>
+                            <th>Sexo</th>
+                            <th>Telefone</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($stmt_pacientes as $paciente) : ?>
+                            <tr>
+                                <td><?php echo $paciente['nome']; ?></td>
+                                <td><?php echo $paciente['data_nascimento']; ?></td>
+                                <td><?php echo $paciente['sexo']; ?></td>
+                                <td><?php echo $paciente['telefone']; ?></td>
+                                <td>
+                                    <button class="btn btn-danger btn-sm">Remover</button>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
             </div>
         </div>
     </main>
@@ -108,6 +108,7 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] !== "1") {
     <footer>
         <p>CliniSimples - Trabalho final PPI</p>
     </footer>
+
 </body>
 
 </html>

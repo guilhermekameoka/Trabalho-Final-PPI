@@ -8,6 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $senha = $_POST["senha"] ?? "";
 
     try {
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $pdo->beginTransaction();
 
         // Verifica se é paciente
@@ -19,10 +20,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $dados_paciente = $stmt_paciente->fetch(PDO::FETCH_ASSOC);
 
             // Verifica se a senha corresponde com a senha hash
-            if (password_verify($senha, $dados_paciente['senha'])) {
+            if (password_verify($senha, $dados_paciente['hash_senha'])) {
                 session_start();
                 $_SESSION["login"] = "1";
-                $_SESSION["nome"] = $row['nome'];
+                $_SESSION["nome"] = $dados_paciente['nome'];
                 header("location: ../templates/private/paciente/home.php");
                 exit();
             }
@@ -37,10 +38,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $dados_funcionario = $stmt_funcionario->fetch(PDO::FETCH_ASSOC);
 
             // Verifica se a senha corresponde com a senha hash
-            if (password_verify($senha, $dados_funcionario['senha'])) {
+            if (password_verify($senha, $dados_funcionario['hash_senha'])) {
                 session_start();
                 $_SESSION["login"] = "1";
-                $_SESSION["nome"] = $row['nome'];
+                $_SESSION["nome"] = $dados_funcionario['nome'];
                 header("location: ../templates/private/funcionario/homeFuncionario.php");
                 exit();
             }
@@ -48,11 +49,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Se chegou aqui, as credenciais não foram encontradas
         throw new Exception('Credenciais inválidas');
-
     } catch (Exception $e) {
         // Rollback em caso de falha
         $pdo->rollback();
         exit('Falha no login: ' . $e->getMessage());
     }
 }
-?>
