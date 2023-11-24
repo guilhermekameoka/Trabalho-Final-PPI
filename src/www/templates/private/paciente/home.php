@@ -32,7 +32,9 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] !== "1") {
                     <h1 id="CliniSimples" class="ml-2">CliniSimples</h1>
                 </div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -42,7 +44,7 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] !== "1") {
                         <a class="nav-link color-white" href="./home.php">Home</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link color-white" href="./perfil.html">Perfil</a>
+                        <a class="nav-link color-white" href="./perfil.php">Perfil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link color-white" href="./agenda.php">Agendamentos</a>
@@ -57,6 +59,7 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] !== "1") {
             </div>
         </nav>
     </header>
+
     <main>
         <div class="container">
             <div class="boas-vindas">

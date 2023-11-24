@@ -2,6 +2,9 @@
 require "conexao.php";
 $pdo = mysqlConnect();
 
+require "sessionmanager.php";
+$sessionManager = new SessionManager();
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $email = $_POST["email"] ?? "";
@@ -22,9 +25,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Verifica se a senha corresponde com a senha hash
             if (password_verify($senha, $dados_paciente['hash_senha'])) {
                 session_start();
+
+                // Armazena o ID do paciente na sessão
+                $sessionManager->set("id", $dados_paciente['id']);
+
                 $_SESSION["login"] = "1";
                 $_SESSION["nome"] = $dados_paciente['nome'];
+                $_SESSION["id"] = $dados_paciente['id'];
                 header("location: ../templates/private/paciente/home.php");
+
+                // Armazena o ID do paciente na sessão
+                // $sessionManager->set("id", $dados_paciente['id']);
+
                 exit();
             }
         }
@@ -40,9 +52,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Verifica se a senha corresponde com a senha hash
             if (password_verify($senha, $dados_funcionario['hash_senha'])) {
                 session_start();
+
                 $_SESSION["login"] = "1";
                 $_SESSION["nome"] = $dados_funcionario['nome'];
+                $_SESSION["id"] = $dados_funcionario['id'];
+
                 header("location: ../templates/private/funcionario/homeFuncionario.php");
+
+                // Armazena o ID do funcionário na sessão
+                // $sessionManager->set("id", $dados_funcionario['id']);
+
                 exit();
             }
         }

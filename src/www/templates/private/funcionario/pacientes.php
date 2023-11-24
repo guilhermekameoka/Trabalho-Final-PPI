@@ -1,10 +1,22 @@
 <?php
 require "conexao.php";
+require "sessionmanager.php";
+session_start();
+
+$sessionManager = new SessionManager();
+
 $pdo = mysqlConnect();
 
 // Consulta para obter todos os pacientes
-$pacientes = "SELECT * FROM paciente";
-$stmt_pacientes = $pdo->query($pacientes);
+// $pacientes = "SELECT * FROM paciente";
+// $stmt_agenda = $pdo->query($pacientes);
+
+$id_funcionario = $sessionManager->get("id");
+
+// Consulta para obter as consultas com base no id_funcionario
+$consulta_agenda = "SELECT * FROM consulta WHERE id_funcionario = ?";
+$stmt_agenda = $pdo->prepare($consulta_agenda);
+$stmt_agenda->execute([$id_funcionario]);
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +42,9 @@ $stmt_pacientes = $pdo->query($pacientes);
                     <h1 id="CliniSimples" class="ml-2">CliniSimples</h1>
                 </div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -40,7 +54,7 @@ $stmt_pacientes = $pdo->query($pacientes);
                         <a class="nav-link color-white" href="./homeFuncionario.php">Home</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link color-white" href="./perfilFuncionario.html">Perfil</a>
+                        <a class="nav-link color-white" href="./perfilFuncionario.php">Perfil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link color-white" href="./agendaFuncionario.php">Agenda</a>
@@ -55,7 +69,7 @@ $stmt_pacientes = $pdo->query($pacientes);
             </div>
         </nav>
     </header>
-    
+
     <main>
         <div class="container">
             <div class="agendamento">
@@ -80,23 +94,35 @@ $stmt_pacientes = $pdo->query($pacientes);
                 <table class="table table-striped table-sm text-center">
                     <thead>
                         <tr class="text-center table-success">
-                            <th>Paciente</th>
+                            <th>Nome</th>
                             <th>Data nasc.</th>
                             <th>Sexo</th>
+                            <th>Email</th>
                             <th>Telefone</th>
-                            <th>Ação</th>
+                            <!-- <th>Ação</th> -->
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($stmt_pacientes as $paciente) : ?>
+                        <?php foreach ($stmt_agenda as $paciente): ?>
                             <tr>
-                                <td><?php echo $paciente['nome']; ?></td>
-                                <td><?php echo $paciente['data_nascimento']; ?></td>
-                                <td><?php echo $paciente['sexo']; ?></td>
-                                <td><?php echo $paciente['telefone']; ?></td>
                                 <td>
-                                    <button class="btn btn-danger btn-sm">Remover</button>
+                                    <?php echo $paciente['nome_paciente']; ?>
                                 </td>
+                                <td>
+                                    <?php echo $paciente['data_nascimento']; ?>
+                                </td>
+                                <td>
+                                    <?php echo $paciente['sexo']; ?>
+                                </td>
+                                <td>
+                                    <?php echo $paciente['email']; ?>
+                                </td>
+                                <td>
+                                    <?php echo $paciente['telefone']; ?>
+                                </td>
+                                <!-- <td>
+                                    <button class="btn btn-danger btn-sm">Remover</button>
+                                </td> -->
                             </tr>
                         <?php endforeach; ?>
                     </tbody>

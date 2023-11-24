@@ -1,40 +1,20 @@
 <?php
 require "conexao.php";
+require "sessionmanager.php";
+session_start();
+
+$sessionManager = new SessionManager();
+
 $pdo = mysqlConnect();
 
-// Consulta para obter todos os pacientes
-$consulta_pacientes = "SELECT * FROM agenda_funcionario";
-$stmt_pacientes = $pdo->query($consulta_pacientes);
+$id_funcionario = $sessionManager->get("id");
+
+// Consulta para obter as consultas com base no id_funcionario
+$consulta_agenda = "SELECT * FROM consulta WHERE id_funcionario = ?";
+$stmt_agenda = $pdo->prepare($consulta_agenda);
+$stmt_agenda->execute([$id_funcionario]);
+
 ?>
-
-<?php
-// Supondo que $idMedicoLogado contém o ID do médico logado
-$idMedicoLogado = 1; // Substitua isso pelo valor real obtido durante o login
-
-// Sua conexão com o banco de dados
-require "conexao.php";
-
-try {
-    $sql = "SELECT * FROM agendamentos WHERE id_medico = :idMedico";
-    $stmt = $conn->prepare($sql);
-    $stmt->bindParam(':idMedico', $idMedicoLogado, PDO::PARAM_INT);
-    $stmt->execute();
-
-    $agendamentos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-} catch (PDOException $e) {
-    echo "Erro ao obter agendamentos: " . $e->getMessage();
-    die();
-}
-?>
-
-<!-- Loop para exibir os agendamentos -->
-<?php foreach ($agendamentos as $agendamento) : ?>
-    <!-- Exiba os detalhes do agendamento conforme necessário -->
-    <p>Data: <?php echo $agendamento['data_consulta']; ?></p>
-    <p>Hora: <?php echo $agendamento['hora_consulta']; ?></p>
-    <!-- Outros detalhes do agendamento -->
-<?php endforeach; ?>
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -69,7 +49,7 @@ try {
                         <a class="nav-link color-white" href="./homeFuncionario.php">Home</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link color-white" href="./perfilFuncionario.html">Perfil</a>
+                        <a class="nav-link color-white" href="./perfilFuncionario.php">Perfil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link color-white" href="./agendaFuncionario.php">Agenda</a>
@@ -84,10 +64,11 @@ try {
             </div>
         </nav>
     </header>
+    
     <main>
         <div class="container">
             <div class="agendamento">
-                <h2>Agenda</h2>
+                <h2>Sua agenda</h2>
                 <form>
                     <div class="row">
                         <div class="col-sm-12 d-flex">
@@ -107,30 +88,28 @@ try {
 
                 <table class="table table-striped table-sm text-center">
                     <thead>
-                        <tr>
+                        <tr class="text-center table-success">
                             <th>Data Consulta</th>
                             <th>Hora Consulta</th>
                             <th>Nome Paciente</th>
-                            <th>Sexo</th>
-                            <th>Ação</th>
+                            <!-- <th>Ação</th> -->
                         </tr>
                     </thead>
                     <?php
-                    if ($stmt_pacientes->rowCount() > 0) {
-                        while ($paciente = $stmt_pacientes->fetch(PDO::FETCH_ASSOC)) {
+                    if ($stmt_agenda->rowCount() > 0) {
+                        while ($consulta = $stmt_agenda->fetch(PDO::FETCH_ASSOC)) {
                             echo "<tr>";
-                            echo "<td>{$paciente['data_consulta']}</td>";
-                            echo "<td>{$paciente['hora_consulta']}</td>";
-                            echo "<td>{$paciente['nome_paciente']}</td>";
-                            echo "<td>{$paciente['sexo']}</td>";
-                            echo "<td>";
-                            echo "<div class='d-block'>";
-                            echo "<button class='btn btn-primary btn-sm'>Remarcar</button>";
-                            echo "</div>";
-                            echo "<div class='d-block'>";
-                            echo "<button class='btn btn-danger btn-sm'>Cancelar</button>";
-                            echo "</div>";
-                            echo "</td>";
+                            echo "<td>{$consulta['data_consulta']}</td>";
+                            echo "<td>{$consulta['horario_consulta']}</td>";
+                            echo "<td>{$consulta['nome_paciente']}</td>";
+                            // echo "<td>";
+                            // echo "<div class='d-block'>";
+                            // echo "<button class='btn btn-primary btn-sm'>Remarcar</button>";
+                            // echo "</div>";
+                            // echo "<div class='d-block'>";
+                            // echo "<button class='btn btn-danger btn-sm'>Cancelar</button>";
+                            // echo "</div>";
+                            // echo "</td>";
                             echo "</tr>";
                         }
                     } else {

@@ -15,3 +15,4 @@ document.getElementById('insereImg').addEventListener('change', function() {
       leitor.readAsDataURL(arquivo); // Converte o arquivo para uma URL de dados legível
   }
 });
+

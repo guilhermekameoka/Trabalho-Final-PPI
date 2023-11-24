@@ -31,7 +31,9 @@ $stmt_funcionario = $pdo->query($funcionarios);
                     <h1 id="CliniSimples" class="ml-2">CliniSimples</h1>
                 </div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -41,7 +43,7 @@ $stmt_funcionario = $pdo->query($funcionarios);
                         <a class="nav-link color-white" href="./home.php">Home</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link color-white" href="./perfil.html">Perfil</a>
+                        <a class="nav-link color-white" href="./perfil.php">Perfil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link color-white" href="./agenda.php">Agendamentos</a>
@@ -85,9 +87,10 @@ $stmt_funcionario = $pdo->query($funcionarios);
                             <div class="col-sm-6">
                                 <select class="form-select" name="id_funcionario" id="id_funcionario">
                                     <option value="">Profissional</option>
-                                    <?php foreach ($stmt_funcionario as $funcionario) : ?>
+                                    <?php foreach ($stmt_funcionario as $funcionario): ?>
                                         <option value="<?php echo $funcionario['id']; ?>">
-                                            <?php echo $funcionario['nome']; ?> - <?php echo $funcionario['especialidade']; ?>
+                                            <?php echo $funcionario['nome']; ?> -
+                                            <?php echo $funcionario['especialidade']; ?>
                                         </option>
                                     <?php endforeach; ?>
 
@@ -153,7 +156,8 @@ $stmt_funcionario = $pdo->query($funcionarios);
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input class="form-control" type="text" id="nome_paciente" name="nome_paciente" placeholder=" ">
+                                    <input class="form-control" type="text" id="nome_paciente" name="nome_paciente"
+                                        placeholder=" ">
                                     <label for="nome_paciente">Nome</label>
 
                                     <div class="alert alert-danger alert-dismissible" id="alertaNome">
@@ -203,7 +207,8 @@ $stmt_funcionario = $pdo->query($funcionarios);
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-floating">
-                                    <input class="form-control" type="tel" id="telefone" name="telefone" placeholder=" ">
+                                    <input class="form-control" type="tel" id="telefone" name="telefone"
+                                        placeholder=" ">
                                     <label for="telefone">Telefone</label>
                                     <div class="alert alert-danger alert-dismissible" id="alertaTelefone">
                                         <span>O telefone deve ser preenchido!</span>
