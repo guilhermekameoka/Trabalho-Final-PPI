@@ -2,7 +2,6 @@
 require "conexao.php";
 $pdo = mysqlConnect();
 
-<<<<<<< HEAD
 // Consulta para obter todos os pacientes
 $consultas = "SELECT nome_profissional FROM consulta";
 $stmt_consulta = $pdo->query($consultas);
@@ -10,11 +9,6 @@ $stmt_consulta = $pdo->query($consultas);
 // Consulta para obter todos os funcionários
 $funcionario = "SELECT nome FROM funcionario f JOIN consulta c ON f.nome = c.nome_profissional";
 $stmt_funcionario = $pdo->query($funcionario);
-=======
-// Consulta para obter todos os profissionais
-$consulta_profissionais = "SELECT * FROM agenda_paciente";
-$stmt_profissionais = $pdo->query($consulta_profissionais);
->>>>>>> d5e342313861798e178a79185a763ab65b56db2a
 ?>
 
 <!DOCTYPE html>
@@ -56,11 +50,7 @@ $stmt_profissionais = $pdo->query($consulta_profissionais);
                         <a class="nav-link color-white" href="./agenda.php">Agendamentos</a>
                     </li>
                     <li class="nav-item">
-<<<<<<< HEAD
                         <a class="nav-link color-white" href="./agendarConsulta.php">Agendar consulta</a>
-=======
-                        <a class="nav-link color-white" href="./agendarConsulta.html">Agendar consulta</a>
->>>>>>> d5e342313861798e178a79185a763ab65b56db2a
                     </li>
                     <li class="nav-item">
                         <a class="nav-link color-white" href="../../../../../index.html">Sair</a>
@@ -95,7 +85,6 @@ $stmt_profissionais = $pdo->query($consulta_profissionais);
                         <tr class="text-center table-success">
                             <th>Data</th>
                             <th>Hora</th>
-<<<<<<< HEAD
                             <th>Profissional</th>
                         </tr>
                     </thead>
@@ -106,30 +95,6 @@ $stmt_profissionais = $pdo->query($consulta_profissionais);
                             echo "<td>" . isset($consulta['data_consulta']) . "</td>";
                             echo "<td>" . (isset($consulta['hora_consulta']) ? $consulta['hora_consulta'] : '') . "</td>";
                             echo "<td>" . (isset($consulta['nome_profissional']) ? $consulta['nome_profissional'] : '') . "</td>";
-=======
-                            <th>Esp.</th>
-                            <th>Profissional</th>
-                            <th>Ação</th>
-                        </tr>
-                    </thead>
-                    <?php
-                    // Verifica se há resultados
-                    if ($stmt_profissionais->rowCount() > 0) {
-                        while ($profissional = $stmt_profissionais->fetch(PDO::FETCH_ASSOC)) {
-                            echo "<tr>";
-                            echo "<td>" . (isset($profissional['data_consulta']) ? $profissional['data_consulta'] : '') . "</td>";
-                            echo "<td>" . (isset($profissional['hora_consulta']) ? $profissional['hora_consulta'] : '') . "</td>";
-                            echo "<td>" . (isset($profissional['especialidade']) ? $profissional['especialidade'] : '') . "</td>";
-                            echo "<td>" . (isset($profissional['nome_profissional']) ? $profissional['nome_profissional'] : '') . "</td>";
-                            echo "<td>";
-                            echo "<div class='d-block'>";
-                            echo "<button class='btn btn-primary btn-sm'>Remarcar</button>";
-                            echo "</div>";
-                            echo "<div class='d-block'>";
-                            echo "<button class='btn btn-danger btn-sm'>Cancelar</button>";
-                            echo "</div>";
-                            echo "</td>";
->>>>>>> d5e342313861798e178a79185a763ab65b56db2a
                             echo "</tr>";
                         }
                     } else {
