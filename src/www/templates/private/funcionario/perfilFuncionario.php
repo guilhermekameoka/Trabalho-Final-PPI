@@ -10,7 +10,7 @@ $pdo = mysqlConnect();
 
 $idUsuario = $sessionManager->get("id");
 
-$consultaUsuario = "SELECT * FROM paciente WHERE id = ?";
+$consultaUsuario = "SELECT * FROM funcionario WHERE id = ?";
 $stmtUsuario = $pdo->prepare($consultaUsuario);
 $stmtUsuario->execute([$idUsuario]);
 $dadosUsuario = $stmtUsuario->fetch(PDO::FETCH_ASSOC);
