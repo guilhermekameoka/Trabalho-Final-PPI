@@ -48,11 +48,7 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] !== "1") {
                         <a class="nav-link color-white" href="./agenda.php">Agendamentos</a>
                     </li>
                     <li class="nav-item">
-<<<<<<< HEAD
                         <a class="nav-link color-white" href="./agendarConsulta.php">Agendar consulta</a>
-=======
-                        <a class="nav-link color-white" href="./agendarConsulta.html">Agendar consulta</a>
->>>>>>> d5e342313861798e178a79185a763ab65b56db2a
                     </li>
                     <li class="nav-item">
                         <a class="nav-link color-white" href="../../../../../index.html">Sair</a>
@@ -61,10 +57,6 @@ if (!isset($_SESSION["login"]) || $_SESSION["login"] !== "1") {
             </div>
         </nav>
     </header>
-<<<<<<< HEAD
-
-=======
->>>>>>> d5e342313861798e178a79185a763ab65b56db2a
     <main>
         <div class="container">
             <div class="boas-vindas">

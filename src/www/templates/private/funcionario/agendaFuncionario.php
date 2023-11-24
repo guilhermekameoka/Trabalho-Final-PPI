@@ -7,6 +7,35 @@ $consulta_pacientes = "SELECT * FROM agenda_funcionario";
 $stmt_pacientes = $pdo->query($consulta_pacientes);
 ?>
 
+<?php
+// Supondo que $idMedicoLogado contém o ID do médico logado
+$idMedicoLogado = 1; // Substitua isso pelo valor real obtido durante o login
+
+// Sua conexão com o banco de dados
+require "conexao.php";
+
+try {
+    $sql = "SELECT * FROM agendamentos WHERE id_medico = :idMedico";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':idMedico', $idMedicoLogado, PDO::PARAM_INT);
+    $stmt->execute();
+
+    $agendamentos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    echo "Erro ao obter agendamentos: " . $e->getMessage();
+    die();
+}
+?>
+
+<!-- Loop para exibir os agendamentos -->
+<?php foreach ($agendamentos as $agendamento) : ?>
+    <!-- Exiba os detalhes do agendamento conforme necessário -->
+    <p>Data: <?php echo $agendamento['data_consulta']; ?></p>
+    <p>Hora: <?php echo $agendamento['hora_consulta']; ?></p>
+    <!-- Outros detalhes do agendamento -->
+<?php endforeach; ?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -46,11 +75,7 @@ $stmt_pacientes = $pdo->query($consulta_pacientes);
                         <a class="nav-link color-white" href="./agendaFuncionario.php">Agenda</a>
                     </li>
                     <li class="nav-item">
-<<<<<<< HEAD
                         <a class="nav-link color-white" href="./pacientes.php">Pacientes</a>
-=======
-                        <a class="nav-link color-white" href="./pacientes.html">Pacientes</a>
->>>>>>> d5e342313861798e178a79185a763ab65b56db2a
                     </li>
                     <li class="nav-item">
                         <a class="nav-link color-white" href="../../../../../index.html">Sair</a>
@@ -59,10 +84,6 @@ $stmt_pacientes = $pdo->query($consulta_pacientes);
             </div>
         </nav>
     </header>
-<<<<<<< HEAD
-
-=======
->>>>>>> d5e342313861798e178a79185a763ab65b56db2a
     <main>
         <div class="container">
             <div class="agendamento">
@@ -85,8 +106,16 @@ $stmt_pacientes = $pdo->query($consulta_pacientes);
 
 
                 <table class="table table-striped table-sm text-center">
+                    <thead>
+                        <tr>
+                            <th>Data Consulta</th>
+                            <th>Hora Consulta</th>
+                            <th>Nome Paciente</th>
+                            <th>Sexo</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
                     <?php
-                    // Verifica se há resultados
                     if ($stmt_pacientes->rowCount() > 0) {
                         while ($paciente = $stmt_pacientes->fetch(PDO::FETCH_ASSOC)) {
                             echo "<tr>";
